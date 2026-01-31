@@ -27,22 +27,22 @@ export default function Header() {
     return (
         <header
             className={cn(
-                "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent",
-                isScrolled ? "bg-background/80 backdrop-blur-md border-white/10 py-4" : "bg-transparent py-6"
+                "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-white/5",
+                isScrolled ? "bg-[rgba(240,240,240,0.8)] backdrop-blur-[10px] py-4" : "bg-transparent py-6"
             )}
         >
-            <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-                <Link href="/" className="text-xl font-cal font-bold tracking-tight">
-                    AGERO.
+            <div className="container mx-auto px-6 flex items-center justify-between h-[80px]">
+                <Link href="/" className="text-[24px] font-cal font-semibold tracking-[-0.5px] text-foreground flex items-center gap-1">
+                    Agero<span className="text-[#FF5200]">.</span>
                 </Link>
 
                 {/* Desktop Nav */}
-                <nav className="hidden md:flex items-center gap-8">
+                <nav className="hidden md:flex items-center gap-10">
                     {navLinks.map((link) => (
                         <Link
                             key={link.name}
                             href={link.href}
-                            className="text-sm font-medium hover:text-brand-orange transition-colors"
+                            className="text-[14px] font-inter font-normal tracking-[-0.14px] text-[rgb(92,92,92)] hover:text-foreground transition-colors"
                         >
                             {link.name}
                         </Link>
@@ -52,7 +52,7 @@ export default function Header() {
                 <div className="hidden md:flex items-center gap-4">
                     <Link
                         href="#contact"
-                        className="bg-card-dark text-white text-sm font-medium px-5 py-2.5 rounded-full hover:scale-105 transition-transform"
+                        className="bg-[#0C0C0C] bg-opacity-[0.82] text-white text-[12px] font-medium px-5 py-3 rounded-full hover:scale-105 transition-transform"
                     >
                         Let's Connect
                     </Link>

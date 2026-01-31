@@ -5,9 +5,9 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
 const AVATARS = [
-    "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop",
-    "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop",
-    "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
+    "https://framerusercontent.com/images/LdiJIgo7vhBde0WiWHd48uSzxU.png",
+    "https://framerusercontent.com/images/I9yoNS4RgoWEeRpJDtgEIoLAd4Y.png",
+    "https://framerusercontent.com/images/G5E86VA7DStEga3pPtCu3nwW1qE.png",
 ];
 
 export default function Hero() {
@@ -28,11 +28,11 @@ export default function Hero() {
     };
 
     return (
-        <section className="relative min-h-[90vh] flex flex-col items-center justify-center pt-32 pb-20 overflow-hidden">
+        <section className="relative min-h-screen flex flex-col items-center justify-start pt-[160px] pb-20 overflow-hidden bg-[rgb(220,220,220)]">
             {/* Background Gradients/Glows */}
             <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-100/20 rounded-full blur-[120px] mix-blend-screen" />
-                <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-brand-orange/10 rounded-full blur-[100px]" />
+                <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[1200px] h-[800px] bg-[radial-gradient(50%_50%_at_50%_50%,rgba(0,102,255,0.15)_0%,rgba(255,255,255,0)_100%)] blur-[80px]" />
+                <div className="absolute top-[20%] right-[-10%] w-[600px] h-[600px] bg-[radial-gradient(50%_50%_at_50%_50%,rgba(255,82,0,0.08)_0%,rgba(255,255,255,0)_100%)] blur-[100px]" />
             </div>
 
             <motion.div
@@ -42,8 +42,8 @@ export default function Hero() {
                 animate="show"
             >
                 {/* Top Badge/Avatars */}
-                <motion.div variants={item} className="flex items-center gap-4 mb-8 bg-white/50 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
-                    <div className="flex -space-x-3">
+                <motion.div variants={item} className="flex items-center gap-3 mb-10 bg-white/80 backdrop-blur-sm border border-black/5 pl-2 pr-5 py-2 rounded-full shadow-sm">
+                    <div className="flex -space-x-2">
                         {AVATARS.map((src, i) => (
                             <div key={i} className="w-8 h-8 rounded-full border-2 border-white overflow-hidden bg-gray-200">
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -51,29 +51,29 @@ export default function Hero() {
                             </div>
                         ))}
                     </div>
-                    <div className="text-sm font-medium text-gray-600 pr-2">
-                        Trusted by 100+ customers
+                    <div className="text-[13px] font-medium text-gray-800">
+                        Trusted by founders
                     </div>
                 </motion.div>
 
                 {/* Main Heading */}
-                <motion.h1 variants={item} className="text-5xl md:text-7xl lg:text-8xl font-cal font-bold tracking-tight text-foreground leading-[1.1] max-w-5xl mb-10">
+                <motion.h1 variants={item} className="text-[48px] md:text-[72px] font-cal font-bold tracking-normal text-[#131313] leading-[1.1] max-w-5xl mb-12">
                     Effortless Design for <br className="hidden md:block" />
-                    <span className="text-brand-orange inline-block">Design Startups</span> based in London, UK
+                    <span className="text-[#FF5200] inline-block">Design Startups</span> based in London, UK
                 </motion.h1>
 
                 {/* Subtext description if needed, or straight to CTA */}
-                <motion.p variants={item} className="text-lg md:text-xl text-gray-600 max-w-2xl mb-10">
+                <motion.p variants={item} className="text-[18px] text-[rgb(92,92,92)] max-w-xl mb-12 leading-relaxed">
                     We craft high-converting websites and unique brand identities that help startups stand out in a crowded market.
                 </motion.p>
 
                 {/* CTAs */}
                 <motion.div variants={item} className="flex flex-col sm:flex-row items-center gap-4">
-                    <a href="#pricing" className="bg-card-dark text-white text-lg font-medium px-8 py-4 rounded-full hover:shadow-xl hover:-translate-y-1 transition-all flex items-center gap-2 group">
+                    <a href="#pricing" className="bg-[#0C0C0C] bg-opacity-[0.82] text-white text-[16px] font-medium px-8 py-4 rounded-full hover:shadow-xl hover:-translate-y-1 transition-all flex items-center gap-2 group">
                         View Plans
-                        <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                        <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                     </a>
-                    <a href="#work" className="text-foreground font-medium px-8 py-4 rounded-full border border-gray-200 hover:bg-gray-100 transition-colors">
+                    <a href="#work" className="text-[#131313] font-medium px-8 py-4 rounded-full border border-black/10 hover:bg-white/50 transition-colors">
                         Our Work
                     </a>
                 </motion.div>

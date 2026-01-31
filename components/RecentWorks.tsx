@@ -8,17 +8,17 @@ const PROJECTS = [
     {
         title: "Archin",
         category: "Branding / Web Design",
-        image: "https://images.unsplash.com/photo-1600607686527-6fb886090705?w=800&h=600&fit=crop", // Architecture
+        image: "https://framerusercontent.com/images/olR1jd1vAg59BKYSorw26ZNxY.png",
     },
     {
         title: "VNTNR",
         category: "App Design / UI",
-        image: "https://images.unsplash.com/photo-1555421689-d68471e189f2?w=800&h=600&fit=crop", // Tech
+        image: "https://framerusercontent.com/images/QhPkJGJBXS8kPS7IhPj7ZBGZpII.png",
     },
     {
         title: "Aeorim",
         category: "Art Direction",
-        image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&h=600&fit=crop", // Abstract
+        image: "https://framerusercontent.com/images/yOPV9nZRSJXmNPqyeWfZSThWAc.png",
     },
 ];
 
