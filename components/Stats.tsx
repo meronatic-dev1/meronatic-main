@@ -15,7 +15,7 @@ export default function Stats() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-gray-200">
                     {STATS.map((stat, i) => (
                         <div key={i} className="flex flex-col items-center justify-center p-8 text-center group cursor-default">
-                            <span className="text-gray-500 text-sm uppercase tracking-widest mb-2 group-hover:text-brand-orange transition-colors duration-300">
+                            <span className="text-gray-500 text-sm uppercase tracking-widest mb-2 group-hover:text-brand-blue transition-colors duration-300">
                                 {stat.label}
                             </span>
                             <span className="text-3xl md:text-4xl font-cal font-bold text-foreground">

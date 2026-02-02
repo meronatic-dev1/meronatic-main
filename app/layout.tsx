@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Agero - Modern Portfolio & Creative Agency",
+  title: "Meronatic",
   description: "Effortless Design for Design Startups based in London, UK",
 };
 
@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={clsx(inter.variable, "antialiased overflow-x-hidden selection:bg-brand-orange selection:text-white")}>
+      <body className={clsx(inter.variable, "antialiased overflow-x-hidden selection:bg-brand-blue selection:text-white")}>
         {children}
       </body>
     </html>

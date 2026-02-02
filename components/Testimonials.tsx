@@ -1,35 +1,172 @@
 'use client';
 
-import React from 'react';
-import { Star } from 'lucide-react';
+import React, { useState } from 'react';
+import { ArrowLeft, ArrowRight, Plus } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+interface Testimonial {
+    id: number;
+    quote: string;
+    name: string;
+    role: string;
+    image: string;
+}
+
+const testimonials: Testimonial[] = [
+    {
+        id: 1,
+        quote: "Franklin turned our ideas into a stunning reality. Their attention to detail and ability to capture our brand's essence is unmatched.",
+        name: "Ethan Moore",
+        role: "Co-founder, NovaTech",
+        image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=2574&auto=format&fit=crop" // Laptop/work scene
+    },
+    {
+        id: 2,
+        quote: "The team exceeded our expectations with their creative solutions and professional approach. A true partner in our success.",
+        name: "Sarah Jenkins",
+        role: "CTO, FutureWave",
+        image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2670&auto=format&fit=crop"
+    },
+    {
+        id: 3,
+        quote: "Working with them was seamless. They understood our vision immediately and delivered a product that stands out in the market.",
+        name: "Michael Chen",
+        role: "Director, Innovate Inc",
+        image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2670&auto=format&fit=crop"
+    }
+];
 
 export default function Testimonials() {
-    return (
-        <section className="py-24 bg-white border-t border-gray-100">
-            <div className="container mx-auto px-4 text-center">
-                <span className="text-brand-orange text-sm font-bold uppercase tracking-widest">Testimonials</span>
-                <h2 className="text-4xl md:text-5xl font-cal font-bold mt-4 mb-16 text-foreground">
-                    Trusted by <br /> Industry Leaders
-                </h2>
+    const [currentIndex, setCurrentIndex] = useState(0);
 
-                <div className="relative max-w-4xl mx-auto bg-gray-50 p-8 md:p-12 rounded-3xl border border-gray-100 shadow-sm">
-                    <div className="flex justify-center gap-1 mb-6 text-brand-orange">
-                        {[1, 2, 3, 4, 5].map((s) => <Star key={s} fill="currentColor" size={20} />)}
+    const nextTestimonial = () => {
+        setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    };
+
+    const prevTestimonial = () => {
+        setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    };
+
+    return (
+        <section className="py-24 bg-[#f0f0f0] relative overflow-hidden">
+            {/* Background Decorative Text */}
+            <div className="absolute top-1 left-1 -translate-x-1 -translate-y-1 select-none pointer-events-none z-0 w-full text-center">
+                <h2 className="text-[12vw] lg:text-[204px] font-cal text-[#0c0c0c]/[0.82] whitespace-nowrap leading-none tracking-tight">
+                    Testimonials
+                </h2>
+            </div>
+
+            <div className="container mx-auto px-4 relative z-10">
+                {/* Header */}
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+                    <div>
+                        <span className="text-[#5c5c5c] font-inter text-sm mb-4 block tracking-tight">Trusted by founders.</span>
+
+                    </div>
+                </div>
+
+                {/* Grid Layout */}
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 h-auto lg:h-[600px]">
+
+                    {/* Stats Card (Left - 4 cols) - KEEPS BLACK BACKGROUND */}
+                    <div className="lg:col-span-4 bg-[#0c0c0c] rounded-[32px] p-8 md:p-12 flex flex-col justify-between border border-white/[0.05]">
+                        <div className="space-y-12">
+                            <div>
+                                <div className="flex items-start text-white mb-2">
+                                    <span className="text-6xl md:text-7xl font-cal">26</span>
+                                    <Plus className="mt-2 text-blue-500" size={32} strokeWidth={3} />
+                                </div>
+                                <p className="text-gray-400 font-medium ml-1">Finalized Projects</p>
+                            </div>
+
+                            <div>
+                                <div className="flex items-start text-white mb-2">
+                                    <span className="text-6xl md:text-7xl font-cal">98</span>
+                                    <span className="text-4xl mt-2 text-blue-500 font-cal">%</span>
+                                </div>
+                                <p className="text-gray-400 font-medium ml-1">Happy Clients</p>
+                            </div>
+
+                            <div>
+                                <div className="flex items-start text-white mb-2">
+                                    <span className="text-6xl md:text-7xl font-cal">4</span>
+                                    <span className="text-4xl mt-2 text-blue-500 font-cal">y</span>
+                                </div>
+                                <p className="text-gray-400 font-medium ml-1">Years Experience</p>
+                            </div>
+                        </div>
+
+                        <div className="mt-12 pt-8 border-t border-white/[0.05]">
+                            <p className="text-sm text-gray-500">
+                                We deliver results that matter.
+                            </p>
+                        </div>
                     </div>
 
-                    <blockquote className="text-2xl md:text-3xl font-medium leading-relaxed text-gray-800 mb-8">
-                        "Agero transformed our startup's digital presence. Their attention to detail and design philosophy matches the quality we strive for in our own products. Simply outstanding."
-                    </blockquote>
+                    {/* Slider Card (Right - 8 cols) */}
+                    <div className="lg:col-span-8 relative rounded-[32px] overflow-hidden group">
+                        <AnimatePresence mode='wait'>
+                            <motion.div
+                                key={currentIndex}
+                                initial={{ opacity: 0, scale: 1.05 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 0.5 }}
+                                className="absolute inset-0 bg-cover bg-center"
+                                style={{ backgroundImage: `url(${testimonials[currentIndex].image})` }}
+                            >
+                                {/* Dark Overlay */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+                            </motion.div>
+                        </AnimatePresence>
 
-                    <div className="flex flex-col items-center">
-                        <div className="w-16 h-16 rounded-full overflow-hidden mb-4 border-2 border-white shadow-md">
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="Client" className="w-full h-full object-cover" />
+                        <div className="absolute inset-0 p-8 md:p-12 flex flex-col justify-between">
+                            {/* Top Bar */}
+                            <div className="flex justify-between items-start">
+                                <span className="bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full text-white text-sm font-medium border border-white/10">
+                                    0{currentIndex + 1} / 0{testimonials.length}
+                                </span>
+                            </div>
+
+                            {/* Bottom Content */}
+                            <div className="relative z-10 mt-auto">
+                                <motion.div
+                                    key={currentIndex}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: 0.2, duration: 0.5 }}
+                                >
+                                    <blockquote className="text-2xl md:text-4xl font-cal text-white leading-relaxed mb-8 max-w-3xl">
+                                        "{testimonials[currentIndex].quote}"
+                                    </blockquote>
+
+                                    <div className="flex items-center justify-between">
+                                        <div>
+                                            <div className="text-white text-lg font-medium">{testimonials[currentIndex].name}</div>
+                                            <div className="text-gray-400 text-sm">{testimonials[currentIndex].role}</div>
+                                        </div>
+
+                                        {/* Navigation Buttons */}
+                                        <div className="flex gap-4">
+                                            <button
+                                                onClick={prevTestimonial}
+                                                className="w-14 h-14 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 group/btn"
+                                                aria-label="Previous testimonial"
+                                            >
+                                                <ArrowLeft size={24} />
+                                            </button>
+                                            <button
+                                                onClick={nextTestimonial}
+                                                className="w-14 h-14 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 group/btn"
+                                                aria-label="Next testimonial"
+                                            >
+                                                <ArrowRight size={24} />
+                                            </button>
+                                        </div>
+                                    </div>
+                                </motion.div>
+                            </div>
                         </div>
-                        <cite className="not-italic">
-                            <div className="font-cal text-lg text-foreground">James Wilson</div>
-                            <div className="text-sm text-gray-500">CEO at TechFlow</div>
-                        </cite>
                     </div>
                 </div>
             </div>

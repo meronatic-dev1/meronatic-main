@@ -25,7 +25,7 @@ export default function Pricing() {
         <section id="pricing" className="py-24 bg-white">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
-                    <span className="text-brand-orange text-sm font-bold uppercase tracking-widest">Pricing</span>
+                    <span className="text-brand-blue text-sm font-bold uppercase tracking-widest">Pricing</span>
                     <h2 className="text-4xl md:text-5xl font-cal font-bold mt-4 text-foreground">
                         Simple, Transparent Plans
                     </h2>
@@ -33,7 +33,7 @@ export default function Pricing() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                     {PLANS.map((plan, i) => (
-                        <div key={i} className={`rounded-3xl p-8 md:p-10 border transition-all duration-300 hover:shadow-xl ${plan.primary ? 'bg-card-dark text-white border-card-dark ring-4 ring-brand-orange/20' : 'bg-gray-50 border-gray-200 text-foreground'}`}>
+                        <div key={i} className={`rounded-3xl p-8 md:p-10 border transition-all duration-300 hover:shadow-xl ${plan.primary ? 'bg-card-dark text-white border-card-dark ring-4 ring-brand-blue/20' : 'bg-gray-50 border-gray-200 text-foreground'}`}>
                             <div className="mb-8">
                                 <h3 className="text-lg font-medium opacity-80 mb-2">{plan.name}</h3>
                                 <div className="flex items-baseline gap-1">
@@ -45,14 +45,14 @@ export default function Pricing() {
                                 </p>
                             </div>
 
-                            <a href="#contact" className={`block w-full text-center py-4 rounded-full font-medium transition-colors mb-8 ${plan.primary ? 'bg-brand-orange text-white hover:bg-orange-600' : 'bg-white text-foreground border border-gray-200 hover:bg-gray-100'}`}>
+                            <a href="#contact" className={`block w-full text-center py-4 rounded-full font-medium transition-colors mb-8 ${plan.primary ? 'bg-brand-blue text-white hover:bg-blue-600' : 'bg-white text-foreground border border-gray-200 hover:bg-gray-100'}`}>
                                 Get Started
                             </a>
 
                             <ul className="space-y-4">
                                 {plan.features.map((feature, f) => (
                                     <li key={f} className="flex items-center gap-3 text-sm">
-                                        <div className={`flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center ${plan.primary ? 'bg-white/10 text-brand-orange' : 'bg-brand-orange/10 text-brand-orange'}`}>
+                                        <div className={`flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center ${plan.primary ? 'bg-white/10 text-brand-blue' : 'bg-brand-blue/10 text-brand-blue'}`}>
                                             <Check size={12} strokeWidth={3} />
                                         </div>
                                         <span className={plan.primary ? 'text-gray-300' : 'text-gray-600'}>{feature}</span>

@@ -28,12 +28,12 @@ export default function RecentWorks() {
             <div className="container mx-auto px-4">
                 <div className="flex flex-col md:flex-row items-end justify-between mb-12">
                     <div>
-                        <span className="text-brand-orange text-sm font-bold uppercase tracking-widest">Recent Works</span>
+                        <span className="text-brand-blue text-sm font-bold uppercase tracking-widest">Recent Works</span>
                         <h2 className="text-4xl md:text-5xl font-cal font-bold mt-4 text-foreground">
                             Selected <br /> Projects
                         </h2>
                     </div>
-                    <a href="#" className="hidden md:flex items-center gap-2 text-sm font-medium border-b border-gray-300 pb-1 hover:border-brand-orange transition-colors">
+                    <a href="#" className="hidden md:flex items-center gap-2 text-sm font-medium border-b border-gray-300 pb-1 hover:border-brand-blue transition-colors">
                         View All Work <ArrowUpRight size={16} />
                     </a>
                 </div>

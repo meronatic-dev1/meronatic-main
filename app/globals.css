@@ -1,10 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #F0F0F0;
+  --color-background: #ffffff;
   --color-foreground: #131313;
   --color-card-dark: #0C0C0C;
-  --color-brand-orange: #FF5200;
+  --color-brand-blue: #2ba0fe;
+  --color-brand-cyan: #36d9ff;
+  --color-brand-dark: #1344cd;
+  --color-brand-orange: #2ba0fe;
 
   --font-cal: "Cal Sans", sans-serif;
   --font-inter: "Inter", sans-serif;
@@ -44,6 +47,18 @@
       transform: translateX(-50%);
     }
   }
+
+  @keyframes marquee-reverse {
+    0% {
+      transform: translateX(-50%);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  --animate-marquee-reverse: marquee-reverse 20s linear infinite;
 }
 
 @font-face {
@@ -61,7 +76,11 @@
   }
 
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-orange to-amber-500;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan to-brand-dark;
+  }
+
+  .animate-marquee-reverse {
+    animation: marquee-reverse 20s linear infinite;
   }
 }
 

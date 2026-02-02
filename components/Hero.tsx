@@ -10,6 +10,40 @@ const AVATARS = [
     "https://framerusercontent.com/images/G5E86VA7DStEga3pPtCu3nwW1qE.png",
 ];
 
+const SplitText = ({ children, className, delay = 0 }: { children: string; className?: string; delay?: number }) => {
+    const words = children.split(" ");
+    let runningLength = 0;
+
+    return (
+        <span className={className}>
+            {words.map((word, wordIndex) => {
+                const startIndex = runningLength;
+                runningLength += word.length + 1;
+
+                return (
+                    <React.Fragment key={wordIndex}>
+                        <span className="inline-block whitespace-nowrap">
+                            {word.split("").map((char, charIndex) => (
+                                <motion.span
+                                    key={charIndex}
+                                    variants={{
+                                        hidden: { opacity: 0, y: 15 },
+                                        show: { opacity: 1, y: 0, transition: { type: "spring", damping: 12, stiffness: 200, delay: delay + ((startIndex + charIndex) * 0.05) } },
+                                    }}
+                                    className="inline-block"
+                                >
+                                    {char}
+                                </motion.span>
+                            ))}
+                        </span>
+                        {wordIndex < words.length - 1 && " "}
+                    </React.Fragment>
+                );
+            })}
+        </span>
+    );
+};
+
 export default function Hero() {
     const container = {
         hidden: { opacity: 0 },
@@ -27,12 +61,22 @@ export default function Hero() {
         show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.25, 0.4, 0.25, 1] as const } },
     };
 
+    const titleContainer = {
+        hidden: { opacity: 0 },
+        show: {
+            opacity: 1,
+            transition: {
+                delayChildren: 0.2,
+            },
+        },
+    };
+
     return (
-        <section className="relative min-h-screen flex flex-col items-center justify-start pt-[160px] pb-20 overflow-hidden bg-[rgb(220,220,220)]">
+        <section className="relative min-h-screen flex flex-col items-center justify-start pt-[160px] pb-20 overflow-hidden bg-white">
             {/* Background Gradients/Glows */}
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[1200px] h-[800px] bg-[radial-gradient(50%_50%_at_50%_50%,rgba(0,102,255,0.15)_0%,rgba(255,255,255,0)_100%)] blur-[80px]" />
-                <div className="absolute top-[20%] right-[-10%] w-[600px] h-[600px] bg-[radial-gradient(50%_50%_at_50%_50%,rgba(255,82,0,0.08)_0%,rgba(255,255,255,0)_100%)] blur-[100px]" />
+                <div className="absolute top-[20%] right-[-10%] w-[600px] h-[600px] bg-[radial-gradient(50%_50%_at_50%_50%,rgba(54,217,255,0.15)_0%,rgba(255,255,255,0)_100%)] blur-[100px]" />
             </div>
 
             <motion.div
@@ -57,9 +101,9 @@ export default function Hero() {
                 </motion.div>
 
                 {/* Main Heading */}
-                <motion.h1 variants={item} className="text-[48px] md:text-[72px] font-cal font-bold tracking-normal text-[#131313] leading-[1.1] max-w-5xl mb-12">
-                    Effortless Design for <br className="hidden md:block" />
-                    <span className="text-[#FF5200] inline-block">Design Startups</span> based in London, UK
+                <motion.h1 variants={titleContainer} className="text-[48px] md:text-[72px] font-cal font-bold tracking-normal text-[#131313] leading-[1.1] max-w-5xl mb-12 w-full text-center mx-auto">
+                    <SplitText>Effortless Design for</SplitText> <br className="hidden md:block" />
+                    <SplitText className="text-[#2ba0fe]" delay={0.6}>Design Startups</SplitText><SplitText delay={1.1}> based in Dubai, UAE</SplitText>
                 </motion.h1>
 
                 {/* Subtext description if needed, or straight to CTA */}
@@ -69,12 +113,9 @@ export default function Hero() {
 
                 {/* CTAs */}
                 <motion.div variants={item} className="flex flex-col sm:flex-row items-center gap-4">
-                    <a href="#pricing" className="bg-[#0C0C0C] bg-opacity-[0.82] text-white text-[16px] font-medium px-8 py-4 rounded-full hover:shadow-xl hover:-translate-y-1 transition-all flex items-center gap-2 group">
+                    <a href="#pricing" className="bg-[#2ba0fe] bg-opacity-[0.82] text-white text-[16px] font-medium px-8 py-4 rounded-full hover:shadow-xl hover:-translate-y-1 transition-all flex items-center gap-2 group">
                         View Plans
                         <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                    </a>
-                    <a href="#work" className="text-[#131313] font-medium px-8 py-4 rounded-full border border-black/10 hover:bg-white/50 transition-colors">
-                        Our Work
                     </a>
                 </motion.div>
             </motion.div>
