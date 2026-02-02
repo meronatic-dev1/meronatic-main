@@ -3,46 +3,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { TextReveal } from './ui/TextReveal';
 
 const AVATARS = [
     "https://framerusercontent.com/images/LdiJIgo7vhBde0WiWHd48uSzxU.png",
     "https://framerusercontent.com/images/I9yoNS4RgoWEeRpJDtgEIoLAd4Y.png",
     "https://framerusercontent.com/images/G5E86VA7DStEga3pPtCu3nwW1qE.png",
 ];
-
-const SplitText = ({ children, className, delay = 0 }: { children: string; className?: string; delay?: number }) => {
-    const words = children.split(" ");
-    let runningLength = 0;
-
-    return (
-        <span className={className}>
-            {words.map((word, wordIndex) => {
-                const startIndex = runningLength;
-                runningLength += word.length + 1;
-
-                return (
-                    <React.Fragment key={wordIndex}>
-                        <span className="inline-block whitespace-nowrap">
-                            {word.split("").map((char, charIndex) => (
-                                <motion.span
-                                    key={charIndex}
-                                    variants={{
-                                        hidden: { opacity: 0, y: 15 },
-                                        show: { opacity: 1, y: 0, transition: { type: "spring", damping: 12, stiffness: 200, delay: delay + ((startIndex + charIndex) * 0.05) } },
-                                    }}
-                                    className="inline-block"
-                                >
-                                    {char}
-                                </motion.span>
-                            ))}
-                        </span>
-                        {wordIndex < words.length - 1 && " "}
-                    </React.Fragment>
-                );
-            })}
-        </span>
-    );
-};
 
 export default function Hero() {
     const container = {
@@ -75,8 +42,8 @@ export default function Hero() {
         <section className="relative min-h-screen flex flex-col items-center justify-start pt-[160px] pb-20 overflow-hidden bg-white">
             {/* Background Gradients/Glows */}
             <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[1200px] h-[800px] bg-[radial-gradient(50%_50%_at_50%_50%,rgba(0,102,255,0.15)_0%,rgba(255,255,255,0)_100%)] blur-[80px]" />
-                <div className="absolute top-[20%] right-[-10%] w-[600px] h-[600px] bg-[radial-gradient(50%_50%_at_50%_50%,rgba(54,217,255,0.15)_0%,rgba(255,255,255,0)_100%)] blur-[100px]" />
+                <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[1200px] h-[800px] bg-white" />
+                <div className="absolute top-[20%] right-[-10%] w-[600px] h-[600px] bg-white" />
             </div>
 
             <motion.div
@@ -101,10 +68,11 @@ export default function Hero() {
                 </motion.div>
 
                 {/* Main Heading */}
-                <motion.h1 variants={titleContainer} className="text-[48px] md:text-[72px] font-cal font-bold tracking-normal text-[#131313] leading-[1.1] max-w-5xl mb-12 w-full text-center mx-auto">
-                    <SplitText>Effortless Design for</SplitText> <br className="hidden md:block" />
-                    <SplitText className="text-[#2ba0fe]" delay={0.6}>Design Startups</SplitText><SplitText delay={1.1}> based in Dubai, UAE</SplitText>
-                </motion.h1>
+                <h1 className="text-[48px] md:text-[72px] font-cal font-bold tracking-normal text-[#131313] leading-[1.1] max-w-5xl mb-12 w-full text-center mx-auto">
+                    <TextReveal text="Effortless Design for" className="inline" /> <br className="hidden md:block" />
+                    <TextReveal text="Design Startups" className="text-[#2ba0fe] inline" delay={0.2} />
+                    <TextReveal text=" based in Dubai, UAE" className="inline" delay={0.4} />
+                </h1>
 
                 {/* Subtext description if needed, or straight to CTA */}
                 <motion.p variants={item} className="text-[18px] text-[rgb(92,92,92)] max-w-xl mb-12 leading-relaxed">
@@ -121,4 +89,5 @@ export default function Hero() {
             </motion.div>
         </section>
     );
+
 }

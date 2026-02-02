@@ -48,22 +48,28 @@ export default function Testimonials() {
     };
 
     return (
-        <section className="py-24 bg-[#f0f0f0] relative overflow-hidden">
+        <section className="py-24 bg-[#ffffff] relative overflow-hidden">
             {/* Background Decorative Text */}
-            <div className="absolute top-1 left-1 -translate-x-1 -translate-y-1 select-none pointer-events-none z-0 w-full text-center">
-                <h2 className="text-[12vw] lg:text-[204px] font-cal text-[#0c0c0c]/[0.82] whitespace-nowrap leading-none tracking-tight">
+            <div className="absolute top-32 left-1/2 -translate-x-1/2 z-0 w-full text-center pointer-events-none select-none">
+                <span className="text-[#5c5c5c] font-inter text-sm mb-4 block tracking-tight">(Why clients love Meronatic)</span>
+                <motion.h2
+                    initial={{ y: 100, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    viewport={{ once: true }}
+                    className="text-[18vw] lg:text-[220px] font-bold font-cal text-[#D4D4D4] whitespace-nowrap leading-none tracking-tight"
+                    style={{
+                        maskImage: 'linear-gradient(to bottom, black 30%, transparent 100%)',
+                        WebkitMaskImage: 'linear-gradient(to bottom, black 30%, transparent 100%)'
+                    }}
+                >
                     Testimonials
-                </h2>
+                </motion.h2>
             </div>
 
             <div className="container mx-auto px-4 relative z-10">
-                {/* Header */}
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
-                    <div>
-                        <span className="text-[#5c5c5c] font-inter text-sm mb-4 block tracking-tight">Trusted by founders.</span>
-
-                    </div>
-                </div>
+                {/* Spacer to push content below the large text */}
+                <div className="h-40 lg:h-60" />
 
                 {/* Grid Layout */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 h-auto lg:h-[600px]">
