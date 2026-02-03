@@ -99,7 +99,7 @@ export default function Footer() {
             </div>
 
             {/* Large Background Text */}
-            <div className="absolute left-1/2 -translate-x-1/2 bottom-[10%] md:bottom-[-3%] pointer-events-none select-none z-10 w-full flex justify-center">
+            <div className="absolute left-1/2 -translate-x-1/2 bottom-[5%] md:bottom-[-3%] pointer-events-none select-none z-10 w-full flex justify-center">
                 <h1 className="text-[25vw] md:text-[21vw] font-bold leading-none tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-transparent select-none opacity-40">
                     Meronatic
                 </h1>

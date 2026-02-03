@@ -57,7 +57,7 @@ export default function Header() {
                             width={140}
                             height={40}
                             priority
-                            className="object-contain w-[100px] md:w-[140px] h-auto"
+                            className="object-contain w-[100px] md:w-[140px] h-auto translate-y-[2px]" // Fine-tune alignment
                         />
                     </Link>
                 </div>
