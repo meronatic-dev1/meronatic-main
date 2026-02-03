@@ -85,14 +85,14 @@ export default function Footer() {
 
             {/* Bottom Section */}
             <div className="relative z-20 container mx-auto px-6 md:px-[60px] lg:px-[100px] mt-auto mb-[20px]">
-                <div className="flex flex-col md:flex-row items-center md:items-end justify-between text-[13px] font-medium text-[#666666] w-full">
-                    <p className="mb-4 md:mb-0">© 2025 Meronatic. All rights reserved.</p>
+                <div className="flex flex-col md:flex-row items-center md:items-end justify-between text-[13px] font-medium text-[#666666] w-full gap-4 md:gap-0">
+                    <p className="order-2 md:order-1">© 2025 Meronatic. All rights reserved.</p>
 
-                    <div className="mb-4 md:mb-0 absolute left-1/2 -translate-x-1/2 bottom-[20px]">
+                    <div className="order-1 md:order-2 md:absolute md:left-1/2 md:-translate-x-1/2 md:bottom-[20px]">
                         Dubai &rarr; {time}
                     </div>
 
-                    <a href="#" onClick={scrollToTop} className="text-[#2ba0fe] hover:text-[#60baff] transition-colors mb-4 md:mb-0">
+                    <a href="#" onClick={scrollToTop} className="order-3 text-[#2ba0fe] hover:text-[#60baff] transition-colors">
                         Back to top
                     </a>
                 </div>

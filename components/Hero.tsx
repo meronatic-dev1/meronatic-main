@@ -68,7 +68,7 @@ export default function Hero() {
                 </motion.div>
 
                 {/* Main Heading */}
-                <h1 className="text-[48px] md:text-[72px] font-cal font-bold tracking-normal text-[#131313] leading-[1.1] max-w-5xl mb-12 w-full text-center mx-auto">
+                <h1 className="text-4xl md:text-[72px] font-cal font-bold tracking-normal text-[#131313] leading-[1.1] max-w-5xl mb-8 md:mb-12 w-full text-center mx-auto px-4">
                     <TextReveal text="Effortless Design for" className="inline" /> <br className="hidden md:block" />
                     <TextReveal text="Design Startups" className="text-[#2ba0fe] inline" delay={0.2} />
                     <TextReveal text=" based in Dubai, UAE" className="inline" delay={0.4} />

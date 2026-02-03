@@ -110,7 +110,7 @@ export default function AboutPage() {
                     </motion.div>
 
                     {/* Main Heading */}
-                    <h1 className="text-[48px] md:text-[72px] font-cal font-bold tracking-normal text-[#131313] leading-[1.1] max-w-5xl mb-12 w-full text-center mx-auto">
+                    <h1 className="text-4xl md:text-[72px] font-cal font-bold tracking-normal text-[#131313] leading-[1.1] max-w-5xl mb-12 w-full text-center mx-auto px-4">
                         <TextReveal text="We Connect" className="inline" /> <br className="hidden md:block" />
                         <TextReveal text="Design & Culture" className="text-[#2ba0fe] inline" delay={0.2} />
                         <TextReveal text=" to build Legacy" className="inline" delay={0.4} />

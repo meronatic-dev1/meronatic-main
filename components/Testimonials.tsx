@@ -79,7 +79,7 @@ export default function Testimonials() {
                         <div className="space-y-12">
                             <div>
                                 <div className="flex items-start text-white mb-2">
-                                    <span className="text-6xl md:text-7xl font-cal">26</span>
+                                    <span className="text-5xl md:text-7xl font-cal">26</span>
                                     <Plus className="mt-2 text-blue-500" size={32} strokeWidth={3} />
                                 </div>
                                 <p className="text-gray-400 font-medium ml-1">Finalized Projects</p>

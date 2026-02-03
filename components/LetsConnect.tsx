@@ -58,7 +58,7 @@ export default function LetsConnect() {
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                className="text-6xl md:text-7xl font-bold text-white mb-6 leading-tight"
+                                className="text-4xl md:text-7xl font-bold text-white mb-6 leading-tight"
                             >
                                 Got a project in <br /> mind?
                             </motion.h2>

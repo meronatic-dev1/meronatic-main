@@ -47,7 +47,7 @@ export default function Services() {
                         <motion.h2
                             animate={{ x: [0, -1000] }}
                             transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
-                            className="text-[20vw] font-bold font-cal leading-none tracking-tight flex gap-10 opacity-20"
+                            className="text-[25vw] md:text-[20vw] font-bold font-cal leading-none tracking-tight flex gap-10 opacity-20"
                         >
                             {Array(4).fill(SERVICES[activeIndex].title).map((text, i) => (
                                 <span key={i} style={{ color: '#1344cd' }}>
@@ -63,7 +63,7 @@ export default function Services() {
                 <div className="flex flex-col items-start mb-16 max-w-6xl mx-auto w-full">
                     <div className="text-left mb-12">
                         <span className="text-gray-500 font-inter text-sm mb-4 block tracking-wide uppercase">(Services)</span>
-                        <h2 className="text-5xl md:text-7xl font-cal font-bold text-[#1a1a1a]">What we do</h2>
+                        <h2 className="text-4xl md:text-7xl font-cal font-bold text-[#1a1a1a]">What we do</h2>
                     </div>
 
                     {/* Tab Navigation */}
