@@ -35,7 +35,7 @@ export default function Header() {
             }}
             animate={isHidden ? "hidden" : "visible"}
             transition={{ duration: 0.35, ease: "easeInOut" }}
-            className="fixed top-0 left-0 right-0 z-50 bg-transparent py-6 border-b border-white/5 transition-colors duration-300"
+            className="fixed top-0 left-0 right-0 z-[100] bg-transparent py-6 border-b border-white/5 transition-colors duration-300"
         >
             <motion.div
                 initial={{ y: -100, opacity: 0 }}

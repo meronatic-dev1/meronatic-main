@@ -103,7 +103,7 @@ export default function Testimonials() {
                         </div>
 
                         <div className="mt-12 pt-8 border-t border-white/[0.05]">
-                            <p className="text-sm text-gray-500">
+                            <p className="text-sm text-gray-400">
                                 We deliver results that matter.
                             </p>
                         </div>

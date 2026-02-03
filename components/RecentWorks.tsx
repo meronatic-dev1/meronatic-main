@@ -144,7 +144,7 @@ function Card({ project, index, total, progress, range, targetScale }: CardProps
                 }}
                 className="bg-black rounded-[32px] overflow-hidden max-w-6xl mx-auto border border-white/10 shadow-2xl origin-top"
             >
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-8 md:p-12">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-6 md:p-12">
                     {/* Left Column: Index & Description */}
                     <div className="lg:col-span-3 flex flex-col justify-between h-full min-h-[400px] order-2 lg:order-1">
                         <div>
