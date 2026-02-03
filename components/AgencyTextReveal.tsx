@@ -38,7 +38,7 @@ export default function AgencyTextReveal() {
 
 
             {/* 2. Slanted Tickers (Background) */}
-            <div className="relative w-full h-[300px] my-12 flex items-center justify-center overflow-hidden z-0 opacity-10 md:opacity-100">
+            <div className="relative w-full h-[300px] my-12 flex items-center justify-center overflow-hidden z-0 opacity-100">
                 {/* Ticker 1 - Orange/Red Theme */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] bg-[#2ba0fe] text-white -rotate-5 py-4 shadow-lg z-0">
                     <div className="absolute top-0 left-0 w-32 md:w-64 h-full bg-gradient-to-r from-[#2ba0fe] to-transparent z-10" />
