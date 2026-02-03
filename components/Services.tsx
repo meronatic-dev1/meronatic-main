@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 
-const SERVICES = [
+export const SERVICES = [
     {
         id: "01",
         title: "Web Design",
