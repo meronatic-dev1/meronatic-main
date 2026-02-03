@@ -50,7 +50,7 @@ export default function Testimonials() {
     return (
         <section className="py-24 bg-[#ffffff] relative overflow-hidden">
             {/* Background Decorative Text */}
-            <div className="absolute top-32 left-1/2 -translate-x-1/2 z-0 w-full text-center pointer-events-none select-none">
+            <div className="absolute top-40 left-1/2 -translate-x-1/2 z-0 w-full text-center pointer-events-none select-none">
                 <span className="text-[#5c5c5c] font-inter text-sm mb-4 block tracking-tight">(Why clients love Meronatic)</span>
                 <motion.h2
                     initial={{ y: 100, opacity: 0 }}
