@@ -52,7 +52,7 @@ export default function RecentWorks() {
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ duration: 1, ease: "easeOut" }}
                         viewport={{ once: true }}
-                        className="text-[18vw] lg:text-[220px] font-bold font-cal text-[#D4D4D4] whitespace-nowrap leading-none tracking-tight"
+                        className="text-[13vw] lg:text-[220px] font-bold font-cal text-[#D4D4D4] whitespace-nowrap leading-none tracking-tight"
                         style={{
                             maskImage: 'linear-gradient(to bottom, black 30%, transparent 100%)',
                             WebkitMaskImage: 'linear-gradient(to bottom, black 30%, transparent 100%)'
