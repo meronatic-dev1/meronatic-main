@@ -110,7 +110,7 @@ export default function Testimonials() {
                     </div>
 
                     {/* Slider Card (Right - 8 cols) */}
-                    <div className="lg:col-span-8 relative rounded-[32px] overflow-hidden group">
+                    <div className="lg:col-span-8 relative rounded-[32px] overflow-hidden group min-h-[500px] lg:min-h-auto">
                         <AnimatePresence mode='wait'>
                             <motion.div
                                 key={currentIndex}

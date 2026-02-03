@@ -49,7 +49,7 @@ export default function Header() {
 
             <div className="container mx-auto px-6 flex items-center h-[80px]">
                 {/* Left Side: Logo */}
-                <div className="flex-1 flex items-center justify-start">
+                <div className="flex-1 flex items-center justify-start pl-0">
                     <Link href="/" className="flex items-center">
                         <Image
                             src="/meronatic-logo.png"

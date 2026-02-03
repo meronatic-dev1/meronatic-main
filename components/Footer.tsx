@@ -85,7 +85,7 @@ export default function Footer() {
 
             {/* Bottom Section */}
             <div className="relative z-20 container mx-auto px-6 md:px-[60px] lg:px-[100px] mt-auto mb-[20px]">
-                <div className="flex flex-col md:flex-row items-end justify-between text-[13px] font-medium text-[#666666] w-full">
+                <div className="flex flex-col md:flex-row items-center md:items-end justify-between text-[13px] font-medium text-[#666666] w-full">
                     <p className="mb-4 md:mb-0">© 2025 Meronatic. All rights reserved.</p>
 
                     <div className="mb-4 md:mb-0 absolute left-1/2 -translate-x-1/2 bottom-[20px]">
@@ -100,7 +100,7 @@ export default function Footer() {
 
             {/* Large Background Text */}
             <div className="absolute left-1/2 -translate-x-1/2 bottom-[-3%] pointer-events-none select-none z-10 w-full flex justify-center">
-                <h1 className="text-[21vw] font-bold leading-none tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-transparent select-none opacity-40">
+                <h1 className="text-[25vw] md:text-[21vw] font-bold leading-none tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-transparent select-none opacity-40">
                     Meronatic
                 </h1>
             </div>

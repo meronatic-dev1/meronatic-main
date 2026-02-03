@@ -67,12 +67,12 @@ export default function Services() {
                     </div>
 
                     {/* Tab Navigation */}
-                    <div className="flex flex-wrap justify-center gap-12 md:gap-24 border-b border-gray-200 w-full pb-4">
+                    <div className="flex flex-nowrap overflow-x-auto md:flex-wrap justify-start md:justify-center gap-8 md:gap-24 border-b border-gray-200 w-full pb-4 no-scrollbar">
                         {SERVICES.map((service, index) => (
                             <button
                                 key={index}
                                 onClick={() => setActiveIndex(index)}
-                                className={`text-xl md:text-2xl font-cal transition-all duration-300 relative px-4 py-2 ${activeIndex === index ? 'text-[#2ba0fe]' : 'text-gray-400 hover:text-gray-600'
+                                className={`text-xl md:text-2xl font-cal transition-all duration-300 relative px-4 py-2 whitespace-nowrap ${activeIndex === index ? 'text-[#2ba0fe]' : 'text-gray-400 hover:text-gray-600'
                                     }`}
                             >
                                 <div className="flex items-center gap-3">
