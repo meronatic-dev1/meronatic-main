@@ -69,13 +69,13 @@ export default function Testimonials() {
 
             <div className="container mx-auto px-4 relative z-10">
                 {/* Spacer to push content below the large text */}
-                <div className="h-40 lg:h-60" />
+                <div className="h-20 lg:h-60" />
 
                 {/* Grid Layout */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 h-auto lg:h-[600px]">
 
                     {/* Stats Card (Left - 4 cols) - KEEPS BLACK BACKGROUND */}
-                    <div className="lg:col-span-4 bg-[#0c0c0c] rounded-[32px] p-8 md:p-12 flex flex-col justify-between border border-white/[0.05]">
+                    <div className="lg:col-span-4 bg-[#0c0c0c] rounded-[32px] p-6 md:p-12 flex flex-col justify-between border border-white/[0.05]">
                         <div className="space-y-12">
                             <div>
                                 <div className="flex items-start text-white mb-2">

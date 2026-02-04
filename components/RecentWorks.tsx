@@ -22,7 +22,7 @@ export default function RecentWorks() {
                 {/* Header Title - Sticky */}
                 <motion.div
                     style={{ opacity: headerOpacity }}
-                    className="sticky top-0 z-0 h-screen flex flex-col items-center pt-32 select-none pointer-events-none overflow-hidden box-content"
+                    className="sticky top-0 z-0 h-screen flex flex-col items-center pt-20 md:pt-32 select-none pointer-events-none overflow-hidden box-content"
                 >
                     <span className="text-[#5c5c5c] font-inter text-sm mb-4 block tracking-tight">(Selected Projects)</span>
                     <motion.h2

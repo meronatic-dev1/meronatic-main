@@ -57,10 +57,9 @@ export default function StickyProjectCard({ project, index, total, progress, ran
                     // Remove opacity fade and blur as requested
                     opacity: 1,
                     filter: "blur(0px)",
-                    height: '90vh', // Slightly reduced from 95vh to ensure the stack fits comfortably without overflow
                     width: '100%',
                 }}
-                className="bg-black rounded-[48px] overflow-hidden w-full h-full border border-white/10 shadow-2xl origin-top"
+                className="bg-black rounded-[24px] md:rounded-[48px] overflow-hidden w-full h-[65vh] md:h-[90vh] border border-white/10 shadow-2xl origin-top"
             >
                 <div className="flex flex-col lg:grid lg:grid-cols-12 gap-4 lg:gap-8 items-center p-5 lg:p-12 h-full">
 

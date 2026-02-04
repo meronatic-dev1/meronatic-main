@@ -15,9 +15,9 @@ export default function FAQ() {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     return (
-        <section className="py-32 bg-[#FFFFFF]">
+        <section className="py-16 md:py-32 bg-[#FFFFFF]">
             <div className="container mx-auto px-4">
-                <div className="text-center mb-20">
+                <div className="text-center mb-10 md:mb-20">
                     <span className="text-gray-500 font-inter text-sm mb-4 block tracking-wide uppercase">(FAQs)</span>
                     <h2 className="text-5xl md:text-7xl font-cal font-bold text-[#1a1a1a] mb-6">
                         Your Questions, Answered

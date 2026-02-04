@@ -3,7 +3,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+
 import { TextReveal } from './ui/TextReveal';
+import { AnimatedListDemo } from './AnimatedListDemo';
 
 const AVATARS = [
     "https://framerusercontent.com/images/LdiJIgo7vhBde0WiWHd48uSzxU.png",
@@ -39,20 +41,20 @@ export default function Hero() {
     };
 
     return (
-        <section className="relative min-h-screen flex flex-col items-center justify-start pt-[160px] pb-20 overflow-hidden bg-white">
+        <section className="relative min-h-screen flex flex-col items-center justify-start pt-32 md:pt-[160px] pb-10 md:pb-20 overflow-hidden bg-white">
             {/* Background Gradients/Glows */}
-            <div className="absolute inset-0 pointer-events-none">
+            {/* <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[1200px] h-[800px] bg-white" />
                 <div className="absolute top-[20%] right-[-10%] w-[600px] h-[600px] bg-white" />
-            </div>
+            </div> */}
 
             <motion.div
-                className="container mx-auto px-4 relative z-10 flex flex-col items-center text-center"
+                className="container mx-auto px-4 relative z-10 flex flex-col items-center"
                 variants={container}
                 initial="hidden"
                 animate="show"
             >
-                {/* Top Badge/Avatars */}
+                {/* Top Badge/Avatars - Centered */}
                 <motion.div variants={item} className="flex items-center gap-3 mb-10 bg-white/80 backdrop-blur-sm border border-black/5 pl-2 pr-5 py-2 rounded-full shadow-sm">
                     <div className="flex -space-x-2">
                         {AVATARS.map((src, i) => (
@@ -67,19 +69,37 @@ export default function Hero() {
                     </div>
                 </motion.div>
 
-                {/* Main Heading */}
-                <h1 className="text-4xl md:text-[72px] font-cal font-bold tracking-normal text-[#131313] leading-[1.1] max-w-5xl mb-8 md:mb-12 w-full text-center mx-auto px-4">
-                    <TextReveal text="Effortless Design for" className="inline" /> <br className="hidden md:block" />
-                    <TextReveal text="Design Startups" className="text-[#2ba0fe] inline" delay={0.2} />
-                    <TextReveal text=" based in Dubai, UAE" className="inline" delay={0.4} />
-                </h1>
+                {/* Main Content Grid */}
+                <div className="grid lg:grid-cols-2 gap-12 items-center w-full mb-12">
+                    {/* Left Column: Text Content */}
+                    <div className="flex flex-col items-start text-left lg:pl-12 lg:pr-12">
+                        {/* Main Heading */}
+                        <h1 className="text-4xl md:text-[64px] lg:text-[72px] font-cal font-bold tracking-normal text-[#131313] leading-[1.1] mb-6 md:mb-8 w-full">
+                            <TextReveal text="Effortless Design for" className="inline" /> <br className="hidden md:block" />
+                            <TextReveal text="Design Startups" className="text-[#2ba0fe] inline" delay={0.2} />
+                            <TextReveal text="based in Dubai, UAE" className="inline" delay={0.4} />
+                        </h1>
 
-                {/* Subtext description if needed, or straight to CTA */}
-                <motion.p variants={item} className="text-[18px] text-[rgb(92,92,92)] max-w-xl mb-12 leading-relaxed">
-                    We craft high-converting websites and unique brand identities that help startups stand out in a crowded market.
-                </motion.p>
+                        {/* Subtext description */}
+                        <motion.p variants={item} className="text-[18px] text-[rgb(92,92,92)] max-w-xl mb-0 leading-relaxed">
+                            We craft high-converting websites and unique brand identities that help startups stand out in a crowded market.
+                        </motion.p>
+                    </div>
 
-                {/* CTAs */}
+                    {/* Right Column: Animated List */}
+                    <motion.div
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
+                        className="relative w-full h-full flex items-center justify-center lg:justify-end"
+                    >
+                        <div className="w-full max-w-[500px]">
+                            <AnimatedListDemo />
+                        </div>
+                    </motion.div>
+                </div>
+
+                {/* CTAs - Centered */}
                 <motion.div variants={item} className="flex flex-col sm:flex-row items-center gap-4">
                     <a href="#pricing" className="bg-[#2ba0fe] bg-opacity-[0.82] text-white text-[16px] font-medium px-8 py-4 rounded-full hover:shadow-xl hover:-translate-y-1 transition-all flex items-center gap-2 group">
                         View Plans

@@ -28,7 +28,7 @@ export default function Footer() {
     };
 
     return (
-        <footer className="bg-[#050505] relative overflow-hidden pt-[140px] pb-8 min-h-screen flex flex-col justify-between">
+        <footer className="bg-[#050505] relative overflow-hidden pt-16 md:pt-[140px] pb-8 min-h-screen flex flex-col justify-between">
             {/* Background Pattern */}
             <div className="absolute top-0 left-0 w-full h-full bg-[url('https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png')] bg-cover bg-no-repeat opacity-20 z-0 pointer-events-none mix-blend-color-dodge" />
 

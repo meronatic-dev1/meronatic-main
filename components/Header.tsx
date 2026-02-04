@@ -47,7 +47,7 @@ export default function Header() {
                 <span className="text-[12px] text-white/90 font-medium font-inter">Available for New Projects</span>
             </motion.div>
 
-            <div className="container mx-auto px-6 flex items-center h-[80px]">
+            <div className="container mx-auto px-4 md:px-6 flex items-center h-[70px] md:h-[80px]">
                 {/* Left Side: Logo */}
                 <div className="flex-1 flex items-center justify-start pl-0">
                     <Link href="/" className="flex items-center">

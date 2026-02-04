@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 export default function LetsConnect() {
     return (
-        <section className="relative py-24 bg-[#FFFFFF] overflow-hidden flex flex-col items-center justify-center min-h-[80vh]">
+        <section className="relative py-12 md:py-24 bg-[#FFFFFF] overflow-hidden flex flex-col items-center justify-center min-h-[80vh]">
 
             {/* Large Background Text - Testimonials Style */}
             <div className="absolute top-70 left-1/2 -translate-x-1/2 z-0 w-full text-center pointer-events-none select-none">
@@ -26,10 +26,10 @@ export default function LetsConnect() {
 
             <div className="container mx-auto px-6 relative z-10 max-w-7xl">
                 {/* Spacer to push card below text */}
-                <div className="h-40 lg:h-80" />
+                <div className="h-20 md:h-40 lg:h-80" />
 
                 {/* Main Dark Card */}
-                <div className="bg-black rounded-[3rem] p-8 md:p-16 overflow-hidden relative">
+                <div className="bg-black rounded-[3rem] p-6 md:p-16 overflow-hidden relative">
 
                     {/* Background blurred grid INSIDE CARD */}
                     <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
