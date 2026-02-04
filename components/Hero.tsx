@@ -74,9 +74,10 @@ export default function Hero() {
                     {/* Left Column: Text Content */}
                     <div className="flex flex-col items-start text-left lg:pl-12 lg:pr-12">
                         {/* Main Heading */}
-                        <h1 className="text-4xl md:text-[64px] lg:text-[72px] font-cal font-bold tracking-normal text-[#131313] leading-[1.1] mb-6 md:mb-8 w-full text-balance">
-                            <TextReveal text="Effortless Design for" className="inline" />
+                        <h1 className="text-4xl md:text-[64px] lg:text-[72px] font-cal font-bold tracking-normal text-[#131313] leading-[1.1] mb-6 md:mb-8 w-full">
+                            <TextReveal text="Effortless Design for" className="inline" />{" "}
                             <TextReveal text="Design Startups" className="text-[#2ba0fe] inline" delay={0.2} />
+                            <br className="hidden md:block" />
                             <TextReveal text="based in Dubai, UAE" className="inline" delay={0.4} />
                         </h1>
 
