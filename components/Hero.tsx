@@ -51,7 +51,7 @@ export default function Hero() {
             </div> */}
 
             <motion.div
-                className="container mx-auto px-4 relative z-10 flex flex-col items-center"
+                className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10 flex flex-col items-center"
                 variants={container}
                 initial="hidden"
                 animate="show"
