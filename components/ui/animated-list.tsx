@@ -33,24 +33,32 @@ export interface AnimatedListProps extends ComponentPropsWithoutRef<"div"> {
 export const AnimatedList = React.memo(
   ({ children, className, delay = 1000, ...props }: AnimatedListProps) => {
     const [index, setIndex] = useState(0)
+    const [items, setItems] = useState<React.ReactNode[]>([])
     const childrenArray = useMemo(
       () => React.Children.toArray(children),
       [children]
     )
 
     useEffect(() => {
-      if (index < childrenArray.length - 1) {
-        const timeout = setTimeout(() => {
-          setIndex((prevIndex) => (prevIndex + 1) % childrenArray.length)
-        }, delay)
+      const interval = setInterval(() => {
+        setIndex((prevIndex) => prevIndex + 1)
+      }, delay)
 
-        return () => clearTimeout(timeout)
-      }
-    }, [index, delay, childrenArray.length])
+      return () => clearInterval(interval)
+    }, [delay])
 
-    const itemsToShow = useMemo(() => {
-      const result = childrenArray.slice(0, index + 1).reverse()
-      return result
+    useEffect(() => {
+      const newItem = childrenArray[index % childrenArray.length]
+      if (!newItem) return
+
+      // Use timestamp + index to create truly unique keys
+      const uniqueKey = `${index}-${Date.now()}`
+
+      const itemWithKey = React.cloneElement(newItem as React.ReactElement, {
+        key: uniqueKey,
+      })
+
+      setItems((prev) => [itemWithKey, ...prev].slice(0, 5)) // Keep last 5 items
     }, [index, childrenArray])
 
     return (
@@ -58,8 +66,8 @@ export const AnimatedList = React.memo(
         className={cn(`flex flex-col items-center gap-4`, className)}
         {...props}
       >
-        <AnimatePresence>
-          {itemsToShow.map((item) => (
+        <AnimatePresence mode="popLayout" initial={false}>
+          {items.map((item) => (
             <AnimatedListItem key={(item as React.ReactElement).key}>
               {item}
             </AnimatedListItem>

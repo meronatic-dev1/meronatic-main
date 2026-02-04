@@ -6,6 +6,8 @@ import { ArrowRight } from 'lucide-react';
 
 import { TextReveal } from './ui/TextReveal';
 import { AnimatedListDemo } from './AnimatedListDemo';
+import { cn } from "@/lib/utils";
+import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
 
 const AVATARS = [
     "https://framerusercontent.com/images/LdiJIgo7vhBde0WiWHd48uSzxU.png",
@@ -75,16 +77,35 @@ export default function Hero() {
                     <div className="flex flex-col items-start text-left lg:pl-12 lg:pr-12">
                         {/* Main Heading */}
                         <h1 className="text-4xl md:text-[64px] lg:text-[72px] font-cal font-bold tracking-normal text-[#131313] leading-[1.1] mb-6 md:mb-8 w-full">
-                            <TextReveal text="Effortless Design for" className="inline" />{" "}
-                            <TextReveal text="Design Startups" className="text-[#2ba0fe] inline" delay={0.2} />
+                            <TextReveal text="Effortless Design" className="inline" /> <br className="hidden md:block" />
+                            <span className="whitespace-nowrap">
+                                <TextReveal text="for" className="inline" />
+                                <span className="inline-block">&nbsp;</span>
+                                <TextReveal text="Design Startups" className="text-[#2ba0fe] inline" delay={0.2} />
+                            </span>
                             <br className="hidden md:block" />
                             <TextReveal text="based in Dubai, UAE" className="inline" delay={0.4} />
                         </h1>
 
                         {/* Subtext description */}
-                        <motion.p variants={item} className="text-[18px] text-[rgb(92,92,92)] max-w-xl mb-0 leading-relaxed">
+                        <motion.p variants={item} className="text-[18px] text-[rgb(92,92,92)] max-w-xl mb-8 leading-relaxed">
                             We craft high-converting websites and unique brand identities that help startups stand out in a crowded market.
                         </motion.p>
+
+                        {/* CTAs - Left Aligned */}
+                        <motion.div variants={item} className="flex flex-col sm:flex-row items-center justify-start gap-4">
+                            <a
+                                href="#pricing"
+                                className={cn(
+                                    "group rounded-full border border-black/5 bg-neutral-100 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800"
+                                )}
+                            >
+                                <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
+                                    <span>View Plans</span>
+                                    <ArrowRight className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+                                </AnimatedShinyText>
+                            </a>
+                        </motion.div>
                     </div>
 
                     {/* Right Column: Animated List */}
@@ -100,13 +121,6 @@ export default function Hero() {
                     </motion.div>
                 </div>
 
-                {/* CTAs - Centered */}
-                <motion.div variants={item} className="flex flex-col sm:flex-row items-center gap-4">
-                    <a href="#pricing" className="bg-[#2ba0fe] bg-opacity-[0.82] text-white text-[16px] font-medium px-8 py-4 rounded-full hover:shadow-xl hover:-translate-y-1 transition-all flex items-center gap-2 group">
-                        View Plans
-                        <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                    </a>
-                </motion.div>
             </motion.div>
         </section>
     );
