@@ -8,6 +8,7 @@ import { TextReveal } from './ui/TextReveal';
 import { AnimatedListDemo } from './AnimatedListDemo';
 import { cn } from "@/lib/utils";
 import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
+import WordRotate from "@/components/ui/word-rotate";
 
 const AVATARS = [
     "https://framerusercontent.com/images/LdiJIgo7vhBde0WiWHd48uSzxU.png",
@@ -76,20 +77,19 @@ export default function Hero() {
                     {/* Left Column: Text Content */}
                     <div className="flex flex-col items-start text-left lg:pl-4 lg:pr-4">
                         {/* Main Heading */}
+                        {/* Main Heading */}
                         <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-[72px] font-cal font-bold tracking-normal text-[#131313] leading-[1.1] mb-6 md:mb-8 w-full">
-                            <span className="whitespace-nowrap">
-                                <TextReveal text="Effortless Design" className="inline" />
-                            </span> <br className="hidden md:block" />
-                            <span className="whitespace-nowrap">
-                                <TextReveal text="for" className="inline" />
-                                <span className="inline-block">&nbsp;</span>
-                                <TextReveal text="Design Startups" className="text-[#2ba0fe] inline" delay={0.2} />
+                            <span className="block mb-2">
+                                <TextReveal text="We deliver structured" className="inline" />
                             </span>
-                            <br className="hidden md:block" />
-                            <span className="whitespace-nowrap">
-                                <TextReveal text="based in Dubai," className="inline" delay={0.4} />
-                                <span className="inline-block">&nbsp;</span>
-                                <TextReveal text="UAE" className="inline" delay={0.4} />
+                            <span className="block mb-2">
+                                <TextReveal text="growth solutions for" className="inline" delay={0.2} />
+                            </span>
+                            <span className="block text-[#2ba0fe]">
+                                <WordRotate
+                                    words={["Startups", "Brands", "Scaleups", "Enterprises", "Leaders"]}
+                                    className="text-[#2ba0fe]"
+                                />
                             </span>
                         </h1>
 
