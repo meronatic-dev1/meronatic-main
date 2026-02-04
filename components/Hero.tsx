@@ -89,7 +89,7 @@ export default function Hero() {
                                     loop={true}
                                     duration={100}
                                     delay={1000}
-                                    className="text-[#2ba0fe] text-left font-cal font-bold !text-4xl !md:text-5xl !lg:text-6xl !xl:text-[72px] !leading-[1.1] tracking-normal"
+                                    className="text-[#2ba0fe]"
                                 />
                             </motion.span>
                         </h1>
