@@ -33,7 +33,7 @@ export default function WordRotate({
     }, [words, duration]);
 
     return (
-        <div className={cn("overflow-hidden py-2 inline-flex", className)}>
+        <div className={cn("overflow-hidden inline-flex", className)}>
             <AnimatePresence mode="wait">
                 <motion.span
                     key={words[index]}
