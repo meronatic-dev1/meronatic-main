@@ -83,13 +83,13 @@ export default function Hero() {
                                 We deliver structured growth solutions for
                             </motion.span>
                             <span className="inline-block w-2 md:w-3" />
-                            <motion.span variants={item} className="inline-flex text-[#2ba0fe] align-bottom">
+                            <motion.span variants={item} className="inline-block text-[#2ba0fe]">
                                 <TypingAnimation
                                     words={["Startups", "Brands", "Scaleups", "Enterprises", "Leaders"]}
                                     loop={true}
                                     duration={100}
                                     delay={1000}
-                                    className="text-[#2ba0fe] text-left !text-4xl !md:text-5xl !lg:text-6xl !xl:text-[72px] !leading-[1.1]"
+                                    className="text-[#2ba0fe] text-left font-cal font-bold !text-4xl !md:text-5xl !lg:text-6xl !xl:text-[72px] !leading-[1.1] tracking-normal"
                                 />
                             </motion.span>
                         </h1>
