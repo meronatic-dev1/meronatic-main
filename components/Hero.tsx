@@ -79,16 +79,16 @@ export default function Hero() {
                         {/* Main Heading */}
                         {/* Main Heading */}
                         <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-[72px] font-cal font-bold tracking-normal text-[#131313] leading-[1.1] mb-6 md:mb-8 w-full">
-                            <span className="inline">
-                                <TextReveal text="We deliver structured growth solutions for" className="inline" />
-                            </span>
+                            <motion.span variants={item} className="inline">
+                                We deliver structured growth solutions for
+                            </motion.span>
                             <span className="inline-block w-2 md:w-3" />
-                            <span className="inline-flex text-[#2ba0fe] align-bottom">
+                            <motion.span variants={item} className="inline-flex text-[#2ba0fe] align-bottom">
                                 <WordRotate
                                     words={["Startups", "Brands", "Scaleups", "Enterprises", "Leaders"]}
                                     className="text-[#2ba0fe]"
                                 />
-                            </span>
+                            </motion.span>
                         </h1>
 
                         {/* Subtext description */}
