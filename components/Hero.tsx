@@ -8,7 +8,7 @@ import { TextReveal } from './ui/TextReveal';
 import { AnimatedListDemo } from './AnimatedListDemo';
 import { cn } from "@/lib/utils";
 import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
-import WordRotate from "@/components/ui/word-rotate";
+import { MorphingText } from "@/components/ui/morphing-text";
 
 const AVATARS = [
     "https://framerusercontent.com/images/LdiJIgo7vhBde0WiWHd48uSzxU.png",
@@ -84,9 +84,9 @@ export default function Hero() {
                             </motion.span>
                             <span className="inline-block w-2 md:w-3" />
                             <motion.span variants={item} className="inline-flex text-[#2ba0fe] align-bottom">
-                                <WordRotate
-                                    words={["Startups", "Brands", "Scaleups", "Enterprises", "Leaders"]}
-                                    className="text-[#2ba0fe]"
+                                <MorphingText
+                                    texts={["Startups", "Brands", "Scaleups", "Enterprises", "Leaders"]}
+                                    className="text-[#2ba0fe] text-left !w-[350px] !text-4xl !md:text-5xl !lg:text-6xl !xl:text-[72px] !leading-[1.1] !h-auto"
                                 />
                             </motion.span>
                         </h1>
