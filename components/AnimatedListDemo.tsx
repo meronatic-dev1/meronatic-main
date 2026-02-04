@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { AnimatedList } from "@/components/ui/animated-list";
-import { TrendingUp, Target, Award, Megaphone, Monitor, LayoutTemplate, MousePointerClick, Zap, PieChart, Maximize } from "lucide-react";
+import { Rocket, Crosshair, ShieldCheck, Magnet, AppWindow, LayoutGrid, MousePointer2, Gauge, BarChart3, Workflow } from "lucide-react";
 
 interface Item {
     name: string;
@@ -13,52 +13,52 @@ interface Item {
 let services = [
     {
         name: "Growth Strategy",
-        icon: <TrendingUp className="h-6 w-6 text-white" />,
+        icon: <Rocket className="h-6 w-6 text-white" />,
         color: "#00C9A7",
     },
     {
         name: "Market Positioning",
-        icon: <Target className="h-6 w-6 text-white" />,
+        icon: <Crosshair className="h-6 w-6 text-white" />,
         color: "#FFB800",
     },
     {
         name: "Brand Authority",
-        icon: <Award className="h-6 w-6 text-white" />,
+        icon: <ShieldCheck className="h-6 w-6 text-white" />,
         color: "#FF3D71",
     },
     {
         name: "Demand Generation",
-        icon: <Megaphone className="h-6 w-6 text-white" />,
+        icon: <Magnet className="h-6 w-6 text-white" />,
         color: "#1E86FF",
     },
     {
         name: "Digital Platforms",
-        icon: <Monitor className="h-6 w-6 text-white" />,
+        icon: <AppWindow className="h-6 w-6 text-white" />,
         color: "#9b59b6",
     },
     {
         name: "UI/UX Systems",
-        icon: <LayoutTemplate className="h-6 w-6 text-white" />,
+        icon: <LayoutGrid className="h-6 w-6 text-white" />,
         color: "#2ecc71",
     },
     {
         name: "Conversion Optimization",
-        icon: <MousePointerClick className="h-6 w-6 text-white" />,
+        icon: <MousePointer2 className="h-6 w-6 text-white" />,
         color: "#e67e22",
     },
     {
         name: "Performance Marketing",
-        icon: <Zap className="h-6 w-6 text-white" />,
+        icon: <Gauge className="h-6 w-6 text-white" />,
         color: "#e74c3c",
     },
     {
         name: "Data & Analytics",
-        icon: <PieChart className="h-6 w-6 text-white" />,
+        icon: <BarChart3 className="h-6 w-6 text-white" />,
         color: "#34495e",
     },
     {
         name: "Scale Operations",
-        icon: <Maximize className="h-6 w-6 text-white" />,
+        icon: <Workflow className="h-6 w-6 text-white" />,
         color: "#1abc9c",
     },
 ];
