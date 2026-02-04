@@ -51,7 +51,7 @@ export default function Hero() {
             </div> */}
 
             <motion.div
-                className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10 flex flex-col items-center"
+                className="container mx-auto px-6 md:px-12 lg:px-12 xl:px-20 relative z-10 flex flex-col items-center"
                 variants={container}
                 initial="hidden"
                 animate="show"
@@ -74,17 +74,23 @@ export default function Hero() {
                 {/* Main Content Grid */}
                 <div className="grid lg:grid-cols-2 gap-12 items-center w-full mb-12">
                     {/* Left Column: Text Content */}
-                    <div className="flex flex-col items-start text-left lg:pl-12 lg:pr-12">
+                    <div className="flex flex-col items-start text-left lg:pl-4 lg:pr-4">
                         {/* Main Heading */}
-                        <h1 className="text-4xl md:text-[64px] lg:text-[72px] font-cal font-bold tracking-normal text-[#131313] leading-[1.1] mb-6 md:mb-8 w-full">
-                            <TextReveal text="Effortless Design" className="inline" /> <br className="hidden md:block" />
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-[72px] font-cal font-bold tracking-normal text-[#131313] leading-[1.1] mb-6 md:mb-8 w-full">
+                            <span className="whitespace-nowrap">
+                                <TextReveal text="Effortless Design" className="inline" />
+                            </span> <br className="hidden md:block" />
                             <span className="whitespace-nowrap">
                                 <TextReveal text="for" className="inline" />
                                 <span className="inline-block">&nbsp;</span>
                                 <TextReveal text="Design Startups" className="text-[#2ba0fe] inline" delay={0.2} />
                             </span>
                             <br className="hidden md:block" />
-                            <TextReveal text="based in Dubai, UAE" className="inline" delay={0.4} />
+                            <span className="whitespace-nowrap">
+                                <TextReveal text="based in Dubai," className="inline" delay={0.4} />
+                                <span className="inline-block">&nbsp;</span>
+                                <TextReveal text="UAE" className="inline" delay={0.4} />
+                            </span>
                         </h1>
 
                         {/* Subtext description */}
