@@ -50,7 +50,7 @@ export default function Testimonials() {
     return (
         <section className="py-24 bg-[#ffffff] relative overflow-hidden">
             {/* Background Decorative Text */}
-            <div className="absolute top-40 left-1/2 -translate-x-1/2 z-0 w-full text-center pointer-events-none select-none">
+            <div className="absolute top-10 md:top-40 left-1/2 -translate-x-1/2 z-0 w-full text-center pointer-events-none select-none">
                 <span className="text-[#5c5c5c] font-inter text-sm mb-4 block tracking-tight">(Why clients love Meronatic)</span>
                 <motion.h2
                     initial={{ y: 100, opacity: 0 }}
@@ -69,7 +69,7 @@ export default function Testimonials() {
 
             <div className="container mx-auto px-4 relative z-10">
                 {/* Spacer to push content below the large text */}
-                <div className="h-20 lg:h-60" />
+                <div className="h-28 lg:h-60" />
 
                 {/* Grid Layout */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 h-auto lg:h-[600px]">
