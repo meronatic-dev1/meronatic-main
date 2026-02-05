@@ -58,9 +58,9 @@ export default function LetsConnect() {
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                className="text-4xl md:text-7xl font-bold text-white mb-6 leading-tight"
+                                className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
                             >
-                                Got a project in <br /> mind?
+                                Let’s Build Your <br /> Revenue Engine.
                             </motion.h2>
                             <motion.p
                                 initial={{ opacity: 0, y: 20 }}
@@ -92,6 +92,25 @@ export default function LetsConnect() {
                                         placeholder="Enter the Email"
                                         className="w-full bg-transparent border-b border-gray-700 pb-3 text-gray-300 placeholder-gray-600 focus:outline-none focus:border-white transition-colors"
                                     />
+                                </div>
+
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                    <div>
+                                        <label className="block text-white text-base font-medium mb-2">Phone</label>
+                                        <input
+                                            type="tel"
+                                            placeholder="Enter your Phone"
+                                            className="w-full bg-transparent border-b border-gray-700 pb-3 text-gray-300 placeholder-gray-600 focus:outline-none focus:border-white transition-colors"
+                                        />
+                                    </div>
+                                    <div>
+                                        <label className="block text-white text-base font-medium mb-2">Company</label>
+                                        <input
+                                            type="text"
+                                            placeholder="Company Name"
+                                            className="w-full bg-transparent border-b border-gray-700 pb-3 text-gray-300 placeholder-gray-600 focus:outline-none focus:border-white transition-colors"
+                                        />
+                                    </div>
                                 </div>
 
                                 <div>

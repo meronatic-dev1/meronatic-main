@@ -7,25 +7,39 @@ import { ArrowUpRight } from 'lucide-react';
 export const SERVICES = [
     {
         id: "01",
-        title: "Web Design",
-        description: "We create modern, responsive websites that engage users and drive results.",
+        title: "High-Performance SEO",
+        description: "Dominate search rankings with data-driven strategies that target high-intent traffic, not just clicks.",
         image: "https://framerusercontent.com/images/olR1jd1vAg59BKYSorw26ZNxY.png",
-        tags: ["UX/UI Design", "Responsive Layout", "Web Development"]
+        tags: ["Technical SEO", "Content Strategy", "Authority Building"]
     },
     {
         id: "02",
-        title: "Brand Design",
-        description: "We build bold, cohesive brand identities that leave a lasting impression.",
+        title: "Precision PPC",
+        description: "Maximize ROAS with hyper-targeted campaigns. We manage spend like it's our own, focusing on conversion over impressions.",
         image: "https://framerusercontent.com/images/QhPkJGJBXS8kPS7IhPj7ZBGZpII.png",
-        tags: ["Visual Identity", "Style Guides", "Brand Strategy"]
+        tags: ["Google Ads", "Social Advertising", "Retargeting"]
     },
     {
         id: "03",
-        title: "Logo Design",
-        description: "We design clean, memorable logos that capture your brand’s essence.",
+        title: "Web & App Development",
+        description: "Enterprise-grade digital experiences built for speed, scalability, and conversion.",
         image: "https://framerusercontent.com/images/yOPV9nZRSJXmNPqyeWfZSThWAc.png",
-        tags: ["Logo Marks", "Wordmarks", "Icon Design"]
+        tags: ["Next.js", "Custom Development", "Performance Optimization"]
     },
+    {
+        id: "04",
+        title: "Brand Identity Systems",
+        description: "Cohesive visual systems that position you as a market leader and build instant trust.",
+        image: "https://framerusercontent.com/images/QhPkJGJBXS8kPS7IhPj7ZBGZpII.png",
+        tags: ["Visual Strategy", "Brand Guidelines", "Market Positioning"]
+    },
+    {
+        id: "05",
+        title: "Data & Analytics",
+        description: "Turn data into decisions. We implement tracking infrastructure that reveals the truth about your growth.",
+        image: "https://framerusercontent.com/images/olR1jd1vAg59BKYSorw26ZNxY.png",
+        tags: ["Conversion Tracking", "Attribution Modeling", "Custom Dashboards"]
+    }
 ];
 
 export default function Services() {
@@ -67,17 +81,18 @@ export default function Services() {
                     </div>
 
                     {/* Tab Navigation */}
-                    <div className="flex flex-nowrap overflow-x-auto md:flex-wrap justify-start md:justify-center gap-4 md:gap-24 border-b border-gray-200 w-full pb-4 no-scrollbar">
+                    {/* Tab Navigation */}
+                    <div className="flex w-full justify-between items-center border-b border-gray-200 pb-4">
                         {SERVICES.map((service, index) => (
                             <button
                                 key={index}
                                 onClick={() => setActiveIndex(index)}
-                                className={`text-xl md:text-2xl font-cal transition-all duration-300 relative px-4 py-2 whitespace-nowrap ${activeIndex === index ? 'text-[#2ba0fe]' : 'text-gray-400 hover:text-gray-600'
+                                className={`text-xs md:text-xl font-cal transition-all duration-300 relative px-2 py-2 whitespace-nowrap ${activeIndex === index ? 'text-[#2ba0fe]' : 'text-gray-400 hover:text-gray-600'
                                     }`}
                             >
-                                <div className="flex items-center gap-3">
+                                <div className="flex items-center gap-2">
                                     {activeIndex === index && (
-                                        <div className="w-2 h-2 rounded-full bg-[#2ba0fe]" />
+                                        <div className="w-1.5 h-1.5 rounded-full bg-[#2ba0fe]" />
                                     )}
                                     {service.title}
                                 </div>
