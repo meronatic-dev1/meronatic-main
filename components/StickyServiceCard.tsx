@@ -13,6 +13,7 @@ interface ServiceData {
     outcome: string;
     tags: string[];
     image?: string;
+    indexNumber?: string;
 }
 
 interface CardProps {
