@@ -53,7 +53,7 @@ export default function StickyServiceCard({ service, index, total, progress, ran
                 className="bg-white rounded-[24px] md:rounded-[48px] overflow-hidden w-full h-[85vh] md:h-[90vh] border border-gray-200 shadow-2xl origin-top flex flex-col md:flex-row"
             >
                 {/* Left Content Side */}
-                <div className="flex-1 p-8 md:p-12 flex flex-col justify-between overflow-y-auto">
+                <div className="flex-1 p-6 md:p-12 flex flex-col justify-between overflow-y-auto">
                     <div>
                         <div className="flex items-center justify-between mb-8">
                             <span className="text-xs md:text-sm font-medium text-[#2ba0fe] border border-[#2ba0fe] px-3 py-1 rounded-full">

@@ -12,7 +12,7 @@ const METRICS = [
 
 export default function Outcomes() {
     return (
-        <section className="py-24 bg-white text-black px-4 md:px-8 border-b border-gray-100">
+        <section className="py-12 md:py-20 bg-white text-black px-4 md:px-8 border-b border-gray-100">
             <div className="container mx-auto max-w-6xl">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <span className="text-[#2ba0fe] font-medium tracking-widest uppercase text-sm mb-4 block">
@@ -26,7 +26,7 @@ export default function Outcomes() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12">
                     {METRICS.map((metric, i) => (
                         <motion.div
                             key={i}

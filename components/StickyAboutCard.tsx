@@ -44,7 +44,7 @@ export default function StickyAboutCard({ data, index, total, progress, range, t
                     filter: "blur(0px)",
                     width: '100%',
                 }}
-                className="bg-[#1a1a1a] text-white rounded-[24px] md:rounded-[48px] overflow-hidden w-full h-[85vh] md:h-[90vh] border border-white/10 shadow-2xl origin-top flex flex-col justify-center items-center text-center p-8 md:p-20 relative"
+                className="bg-[#1a1a1a] text-white rounded-[24px] md:rounded-[48px] overflow-hidden w-full h-[85vh] md:h-[90vh] border border-white/10 shadow-2xl origin-top flex flex-col justify-center items-center text-center p-6 md:p-20 relative"
             >
                 {/* Background decorative elements */}
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/10 blur-[100px] rounded-full pointer-events-none" />

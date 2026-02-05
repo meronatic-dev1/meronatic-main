@@ -17,7 +17,7 @@ export default function RecentWorks() {
     const headerOpacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
 
     return (
-        <section ref={containerRef} id="works" className="relative bg-[#FFFFFF] pb-32 px-2 md:px-4">
+        <section ref={containerRef} id="works" className="relative bg-[#FFFFFF] pb-16 md:pb-32 px-2 md:px-4">
             <div className="w-full h-full">
                 {/* Header Title - Sticky */}
                 <motion.div

@@ -77,7 +77,7 @@ export default function ServicesPage() {
             <Header />
 
             {/* Sticky Header Section */}
-            <section className="relative min-h-[80vh] flex flex-col items-center justify-center pt-20 px-4 md:px-8 text-center bg-white">
+            <section className="relative min-h-[60vh] md:min-h-[80vh] flex flex-col items-center justify-center pt-20 px-4 md:px-8 text-center bg-white">
                 <span className="text-[#2ba0fe] font-medium tracking-widest uppercase text-sm mb-4 block">
                     Our Expertise
                 </span>

@@ -51,7 +51,7 @@ export default function RecentWorks() {
     return (
         <main className="min-h-screen bg-[#FFFFFF] text-[#151515]">
             <Header />
-            <section className="relative min-h-screen flex flex-col items-center justify-start pt-[160px] pb-20 overflow-hidden bg-white">
+            <section className="relative min-h-[50vh] md:min-h-screen flex flex-col items-center justify-start pt-32 md:pt-[160px] pb-10 md:pb-20 overflow-hidden bg-white">
                 {/* Background Gradients/Glows */}
                 <div className="absolute inset-0 pointer-events-none">
                     <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[1200px] h-[800px] bg-white" />
@@ -102,7 +102,7 @@ export default function RecentWorks() {
             </section>
 
             {/* Main Content */}
-            <section ref={containerRef} id="works" className="relative bg-[#FFFFFF] pb-32">
+            <section ref={containerRef} id="works" className="relative bg-[#FFFFFF] pb-16 md:pb-32">
                 <div className="container mx-auto px-4">
                     {/* Header Title - Sticky */}
                     <div className="sticky top-0 z-0 h-screen flex flex-col items-center pt-32 select-none pointer-events-none overflow-hidden box-content">
@@ -148,7 +148,7 @@ export default function RecentWorks() {
                     </div>
                 </div>
             </section>
-            <section className="py-32 bg-[#FFFFFF]">
+            <section className="py-16 md:py-32 bg-[#FFFFFF]">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-20">
                         <span className="text-gray-500 font-inter text-sm mb-4 block tracking-wide uppercase">(FAQs)</span>

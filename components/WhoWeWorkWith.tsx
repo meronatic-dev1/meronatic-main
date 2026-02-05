@@ -13,7 +13,7 @@ const INDUSTRIES = [
 
 export default function WhoWeWorkWith() {
     return (
-        <section className="py-24 bg-[#FFFFFF] px-4 md:px-8">
+        <section className="py-12 md:py-20 bg-[#FFFFFF] px-4 md:px-8">
             <div className="container mx-auto max-w-6xl">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-cal font-bold text-[#1a1a1a] mb-6">
