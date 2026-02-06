@@ -90,13 +90,13 @@ export default function Hero() {
                         {/* CTAs - Left Aligned */}
                         <motion.div variants={item} className="flex flex-col sm:flex-row items-center justify-start gap-4">
                             <a
-                                href="#pricing"
+                                href="#lets-connect"
                                 className={cn(
                                     "group rounded-full border border-black/5 bg-neutral-100 text-base text-foreground transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:text-white dark:hover:bg-neutral-800"
                                 )}
                             >
                                 <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
-                                    <span>View Plans</span>
+                                    <span>Request Strategy Call</span>
                                     <ArrowRight className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
                                 </AnimatedShinyText>
                             </a>

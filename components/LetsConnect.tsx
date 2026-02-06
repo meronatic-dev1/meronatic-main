@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 export default function LetsConnect() {
     return (
-        <section className="relative py-12 md:py-24 bg-background overflow-hidden flex flex-col items-center justify-center min-h-[80vh]">
+        <section id="lets-connect" className="relative py-12 md:py-24 bg-background overflow-hidden flex flex-col items-center justify-center min-h-[80vh]">
 
             {/* Large Background Text - Testimonials Style */}
             <div className="absolute top-10 md:top-40 left-1/2 -translate-x-1/2 z-0 w-full text-center pointer-events-none select-none">
