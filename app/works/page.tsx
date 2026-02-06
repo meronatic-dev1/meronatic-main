@@ -11,6 +11,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import StickyProjectCard from '@/components/StickyProjectCard';
 import { ArrowRight, Plus, Minus } from 'lucide-react';
 import { TextReveal } from '@/components/ui/TextReveal';
+import { cn } from "@/lib/utils";
+import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
 
 const FAQS = [
     { question: "Why’s Meronatic instead of full-time designer?", answer: "Hiring a senior full-time designer is expensive (often $100k+) and can be hard to find. With Meronatic, you get access to expert design immediately, for a predictable monthly fee, without the overhead." },
@@ -51,7 +53,7 @@ export default function RecentWorks() {
     return (
         <main className="min-h-screen bg-background text-foreground">
             <Header />
-            <section className="relative min-h-[50vh] md:min-h-screen flex flex-col items-center justify-start pt-32 md:pt-[160px] pb-10 md:pb-20 overflow-hidden bg-background">
+            <section className="relative min-h-fit flex flex-col items-center justify-start pt-32 md:pt-[120px] pb-10 md:pb-16 overflow-hidden bg-background">
                 {/* Background Gradients/Glows */}
                 <div className="absolute inset-0 pointer-events-none">
                     <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[1200px] h-[800px] bg-primary/5 dark:bg-primary/10 rounded-full blur-[120px] opacity-60" />
@@ -92,10 +94,17 @@ export default function RecentWorks() {
                     </motion.p>
 
                     {/* CTAs */}
-                    <motion.div variants={item} className="flex flex-col sm:flex-row items-center gap-4">
-                        <a href="#pricing" className="bg-[#2ba0fe] bg-opacity-[0.82] text-white text-[16px] font-medium px-8 py-4 rounded-full hover:shadow-xl hover:-translate-y-1 transition-all flex items-center gap-2 group">
-                            View Plans
-                            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                    <motion.div variants={item} className="flex flex-col sm:flex-row items-center justify-start gap-4">
+                        <a
+                            href="#lets-connect"
+                            className={cn(
+                                "group rounded-full border border-black/5 bg-neutral-100 text-base text-foreground transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:text-white dark:hover:bg-neutral-800"
+                            )}
+                        >
+                            <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
+                                <span>Request Strategy Call</span>
+                                <ArrowRight className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+                            </AnimatedShinyText>
                         </a>
                     </motion.div>
                 </motion.div>

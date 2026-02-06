@@ -50,10 +50,10 @@ export default function StickyServiceCard({ service, index, total, progress, ran
                     filter: "blur(0px)",
                     width: '100%',
                 }}
-                className="bg-card rounded-[24px] md:rounded-[48px] overflow-hidden w-full h-[85vh] md:h-[90vh] border border-border shadow-2xl origin-top flex flex-col md:flex-row"
+                className="bg-card rounded-[24px] md:rounded-[48px] overflow-hidden w-full min-h-[60vh] h-auto md:h-[90vh] border border-border shadow-2xl origin-top flex flex-col md:flex-row"
             >
                 {/* Left Content Side */}
-                <div className="flex-1 p-6 md:p-12 flex flex-col justify-between overflow-y-auto">
+                <div className="flex-1 p-6 md:p-12 flex flex-col justify-between">
                     <div>
                         <div className="flex items-center gap-3 mb-6">
                             <span className="w-12 h-12 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue font-bold text-lg">
