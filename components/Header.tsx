@@ -80,7 +80,7 @@ export default function Header() {
                 <div className="flex-1 flex items-center justify-end gap-4">
                     <Link
                         href="#contact"
-                        className="hidden md:flex bg-[#2ba0fe] text-white text-[14px] font-medium px-6 py-3 rounded-full hover:scale-105 transition-transform border border-[#2ba0fe] hover:bg-white hover:text-[#2ba0fe]"
+                        className="hidden md:flex bg-brand-blue text-white text-[14px] font-medium px-6 py-3 rounded-full hover:scale-105 transition-transform border border-brand-blue hover:bg-background hover:text-brand-blue"
                     >
                         Contact
                     </Link>

@@ -33,7 +33,7 @@ export default function AgencyTextReveal() {
     const words = text.split(" ");
 
     return (
-        <section className="bg-white py-20 overflow-hidden relative">
+        <section className="bg-background py-20 overflow-hidden relative">
 
 
 
@@ -90,7 +90,7 @@ export default function AgencyTextReveal() {
                 {/* Categories */}
                 <div className="flex justify-center gap-3 mt-12">
                     {["Branding", "Logo", "Website"].map((cat) => (
-                        <span key={cat} className="px-6 py-2 rounded-full border border-gray-200 text-sm font-medium text-gray-600 uppercase tracking-widest bg-white hover:border-black transition-colors cursor-default">
+                        <span key={cat} className="px-6 py-2 rounded-full border border-border text-sm font-medium text-muted-foreground uppercase tracking-widest bg-card hover:border-foreground transition-colors cursor-default">
                             {cat}
                         </span>
                     ))}

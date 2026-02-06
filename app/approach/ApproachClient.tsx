@@ -33,10 +33,10 @@ const PHASES = [
 
 export default function ApproachPage() {
     return (
-        <main className="min-h-screen bg-white text-[#1a1a1a]">
+        <main className="min-h-screen bg-background text-foreground">
             <Header />
 
-            <section className="pt-40 pb-20 px-4 md:px-8 bg-[#FFFFFF] text-[#1a1a1a]">
+            <section className="pt-40 pb-20 px-4 md:px-8 bg-background text-foreground">
                 <div className="container mx-auto max-w-6xl text-center">
                     <span className="text-[#2ba0fe] font-medium tracking-widest uppercase text-sm mb-4 block">
                         The Ascend Framework

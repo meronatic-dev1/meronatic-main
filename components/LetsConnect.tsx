@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 export default function LetsConnect() {
     return (
-        <section className="relative py-12 md:py-24 bg-[#FFFFFF] overflow-hidden flex flex-col items-center justify-center min-h-[80vh]">
+        <section className="relative py-12 md:py-24 bg-background overflow-hidden flex flex-col items-center justify-center min-h-[80vh]">
 
             {/* Large Background Text - Testimonials Style */}
             <div className="absolute top-70 left-1/2 -translate-x-1/2 z-0 w-full text-center pointer-events-none select-none">
@@ -126,7 +126,7 @@ export default function LetsConnect() {
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.98 }}
                                     type="submit"
-                                    className="w-full py-4 rounded-full bg-white text-black font-bold text-lg hover:bg-gray-100 transition-colors mt-4"
+                                    className="w-full py-4 rounded-full bg-foreground text-background font-bold text-lg hover:bg-muted-foreground transition-colors mt-4"
                                 >
                                     Send Now!
                                 </motion.button>

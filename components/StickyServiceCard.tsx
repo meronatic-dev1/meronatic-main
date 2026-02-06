@@ -50,39 +50,36 @@ export default function StickyServiceCard({ service, index, total, progress, ran
                     filter: "blur(0px)",
                     width: '100%',
                 }}
-                className="bg-white rounded-[24px] md:rounded-[48px] overflow-hidden w-full h-[85vh] md:h-[90vh] border border-gray-200 shadow-2xl origin-top flex flex-col md:flex-row"
+                className="bg-card rounded-[24px] md:rounded-[48px] overflow-hidden w-full h-[85vh] md:h-[90vh] border border-border shadow-2xl origin-top flex flex-col md:flex-row"
             >
                 {/* Left Content Side */}
                 <div className="flex-1 p-6 md:p-12 flex flex-col justify-between overflow-y-auto">
                     <div>
-                        <div className="flex items-center justify-between mb-8">
-                            <span className="text-xs md:text-sm font-medium text-[#2ba0fe] border border-[#2ba0fe] px-3 py-1 rounded-full">
-                                {service.indexNumber || `0${index + 1}`}
+                        <div className="flex items-center gap-3 mb-6">
+                            <span className="w-12 h-12 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue font-bold text-lg">
+                                {service.indexNumber}
                             </span>
-                            <div className="flex gap-2">
-                                {service.tags.slice(0, 2).map((tag, t) => (
-                                    <span key={t} className="text-[10px] uppercase tracking-wider text-gray-400 bg-gray-50 px-2 py-1 rounded">
-                                        {tag}
-                                    </span>
-                                ))}
-                            </div>
+                            <span className="text-sm font-bold tracking-widest uppercase text-muted-foreground">
+                                {service.tags[0]}
+                            </span>
                         </div>
-
-                        <h3 className="text-3xl md:text-5xl font-cal text-[#1a1a1a] mb-8 leading-tight">
+                        <h3 className="text-3xl md:text-5xl font-cal font-bold mb-6 text-foreground leading-tight">
                             {service.title}
                         </h3>
-
+                        <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                            {service.problemDesc}
+                        </p>
                         <div className="space-y-8">
                             <div>
                                 <span className="text-red-500 font-bold tracking-wide uppercase text-xs block mb-2">The Problem</span>
-                                <h4 className="text-lg font-bold mb-2 text-gray-900">{service.problem}</h4>
-                                <p className="text-gray-500 text-sm leading-relaxed">{service.problemDesc}</p>
+                                <h4 className="text-lg font-bold mb-2 text-foreground">{service.problem}</h4>
+                                <p className="text-muted-foreground text-sm leading-relaxed">{service.problemDesc}</p>
                             </div>
 
                             <div>
-                                <span className="text-[#2ba0fe] font-bold tracking-wide uppercase text-xs block mb-2">Our Approach</span>
-                                <h4 className="text-lg font-bold mb-2 text-gray-900">{service.approach}</h4>
-                                <p className="text-gray-500 text-sm leading-relaxed">{service.approachDesc}</p>
+                                <span className="text-brand-blue font-bold tracking-wide uppercase text-xs block mb-2">Our Approach</span>
+                                <h4 className="text-lg font-bold mb-2 text-foreground">{service.approach}</h4>
+                                <p className="text-muted-foreground text-sm leading-relaxed">{service.approachDesc}</p>
                             </div>
                         </div>
                     </div>
@@ -90,8 +87,8 @@ export default function StickyServiceCard({ service, index, total, progress, ran
                     <div className="mt-8 pt-8 border-t border-gray-100">
                         <span className="text-green-600 font-bold tracking-wide uppercase text-xs block mb-2">Outcome</span>
                         <div className="flex items-center justify-between">
-                            <h4 className="text-xl font-cal text-[#1a1a1a]">{service.outcome}</h4>
-                            <a href="#contact" className="w-10 h-10 rounded-full bg-[#1a1a1a] text-white flex items-center justify-center hover:bg-[#2ba0fe] transition-colors">
+                            <h4 className="text-xl font-cal text-foreground">{service.outcome}</h4>
+                            <a href="#contact" className="w-10 h-10 rounded-full bg-foreground text-background flex items-center justify-center hover:bg-brand-blue hover:text-white transition-colors">
                                 <ArrowUpRight size={18} />
                             </a>
                         </div>

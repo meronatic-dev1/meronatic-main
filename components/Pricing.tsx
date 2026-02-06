@@ -22,7 +22,7 @@ const PLANS = [
 
 export default function Pricing() {
     return (
-        <section id="pricing" className="py-24 bg-white">
+        <section id="pricing" className="py-24 bg-background">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
                     <span className="text-brand-blue text-sm font-bold uppercase tracking-widest">Pricing</span>
@@ -45,7 +45,7 @@ export default function Pricing() {
                                 </p>
                             </div>
 
-                            <a href="#contact" className={`block w-full text-center py-4 rounded-full font-medium transition-colors mb-8 ${plan.primary ? 'bg-brand-blue text-white hover:bg-blue-600' : 'bg-white text-foreground border border-gray-200 hover:bg-gray-100'}`}>
+                            <a href="#contact" className={`block w-full text-center py-4 rounded-full font-medium transition-colors mb-8 ${plan.primary ? 'bg-brand-blue text-white hover:bg-blue-600' : 'bg-card text-foreground border border-border hover:bg-muted'}`}>
                                 Get Started
                             </a>
 

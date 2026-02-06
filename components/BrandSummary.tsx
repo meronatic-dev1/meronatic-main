@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function BrandSummary() {
     return (
-        <section className="py-12 bg-[#FFFFFF] text-[#1a1a1a] text-center px-4 md:px-8">
+        <section className="py-12 bg-background text-foreground text-center px-4 md:px-8">
             <div className="container mx-auto max-w-4xl">
                 <motion.p
                     initial={{ opacity: 0, scale: 0.95 }}

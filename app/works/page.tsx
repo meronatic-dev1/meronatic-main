@@ -49,13 +49,13 @@ export default function RecentWorks() {
         show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.25, 0.4, 0.25, 1] as const } },
     };
     return (
-        <main className="min-h-screen bg-[#FFFFFF] text-[#151515]">
+        <main className="min-h-screen bg-background text-foreground">
             <Header />
-            <section className="relative min-h-[50vh] md:min-h-screen flex flex-col items-center justify-start pt-32 md:pt-[160px] pb-10 md:pb-20 overflow-hidden bg-white">
+            <section className="relative min-h-[50vh] md:min-h-screen flex flex-col items-center justify-start pt-32 md:pt-[160px] pb-10 md:pb-20 overflow-hidden bg-background">
                 {/* Background Gradients/Glows */}
                 <div className="absolute inset-0 pointer-events-none">
-                    <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[1200px] h-[800px] bg-white" />
-                    <div className="absolute top-[20%] right-[-10%] w-[600px] h-[600px] bg-white" />
+                    <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[1200px] h-[800px] bg-primary/5 dark:bg-primary/10 rounded-full blur-[120px] opacity-60" />
+                    <div className="absolute top-[20%] right-[-10%] w-[600px] h-[600px] bg-brand-cyan/10 dark:bg-brand-cyan/20 rounded-full blur-[100px] opacity-40 animate-pulse" />
                 </div>
 
                 <motion.div
@@ -65,7 +65,7 @@ export default function RecentWorks() {
                     animate="show"
                 >
                     {/* Top Badge/Avatars */}
-                    <motion.div variants={item} className="flex items-center gap-3 mb-10 bg-white/80 backdrop-blur-sm border border-black/5 pl-2 pr-5 py-2 rounded-full shadow-sm">
+                    <motion.div variants={item} className="flex items-center gap-3 mb-10 bg-background/80 backdrop-blur-sm border border-border pl-2 pr-5 py-2 rounded-full shadow-sm">
                         <div className="flex -space-x-2">
                             {AVATARS.map((src, i) => (
                                 <div key={i} className="w-8 h-8 rounded-full border-2 border-white overflow-hidden bg-gray-200">
@@ -102,7 +102,7 @@ export default function RecentWorks() {
             </section>
 
             {/* Main Content */}
-            <section ref={containerRef} id="works" className="relative bg-[#FFFFFF] pb-16 md:pb-32">
+            <section ref={containerRef} id="works" className="relative bg-background pb-16 md:pb-32">
                 <div className="container mx-auto px-4">
                     {/* Header Title - Sticky */}
                     <div className="sticky top-0 z-0 h-screen flex flex-col items-center pt-32 select-none pointer-events-none overflow-hidden box-content">
@@ -148,7 +148,7 @@ export default function RecentWorks() {
                     </div>
                 </div>
             </section>
-            <section className="py-16 md:py-32 bg-[#FFFFFF]">
+            <section className="py-16 md:py-32 bg-background">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-20">
                         <span className="text-gray-500 font-inter text-sm mb-4 block tracking-wide uppercase">(FAQs)</span>

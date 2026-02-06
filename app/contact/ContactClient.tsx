@@ -8,7 +8,7 @@ import { Mail, MessageCircle, ArrowRight } from 'lucide-react';
 
 export default function ContactPage() {
     return (
-        <main className="min-h-screen bg-white text-[#1a1a1a]">
+        <main className="min-h-screen bg-background text-foreground">
             <Header />
 
             <section className="pt-40 pb-20 px-4 md:px-8">
@@ -97,7 +97,7 @@ export default function ContactPage() {
                                     <label className="block text-sm font-medium mb-2 text-gray-400">Project Details</label>
                                     <textarea rows={4} className="w-full bg-gray-900 border border-gray-800 rounded-lg px-4 py-3 focus:outline-none focus:border-[#2ba0fe] transition-colors" placeholder="Tell us about your goals..." />
                                 </div>
-                                <button type="submit" className="w-full bg-white text-black font-bold py-4 rounded-full hover:bg-gray-200 transition-colors flex items-center justify-center gap-2">
+                                <button type="submit" className="w-full bg-foreground text-background font-bold py-4 rounded-full hover:bg-muted-foreground transition-colors flex items-center justify-center gap-2">
                                     Submit Request <ArrowRight size={18} />
                                 </button>
                             </form>

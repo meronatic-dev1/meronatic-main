@@ -5,6 +5,7 @@ import { motion, useTransform, useMotionValueEvent } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import { PROJECTS } from '@/lib/data';
 
+
 interface CardProps {
     project: typeof PROJECTS[0];
     index: number;

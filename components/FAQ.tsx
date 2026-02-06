@@ -15,7 +15,7 @@ export default function FAQ() {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     return (
-        <section className="py-16 md:py-32 bg-[#FFFFFF]">
+        <section className="py-16 md:py-32 bg-background">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-10 md:mb-20">
                     <span className="text-gray-500 font-inter text-sm mb-4 block tracking-wide uppercase">(FAQs)</span>
@@ -32,7 +32,7 @@ export default function FAQ() {
                             <div className="absolute inset-0 bg-gradient-to-r from-[#1344cd] via-[#2ba0fe] to-[#36d9ff] rounded-[2rem] blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-300" />
 
                             <div
-                                className="relative bg-white rounded-[2rem] p-8 h-full"
+                                className="relative bg-card rounded-[2rem] p-8 h-full"
                             >
                                 <button
                                     onClick={() => setOpenIndex(openIndex === i ? null : i)}

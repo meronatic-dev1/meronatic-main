@@ -13,7 +13,7 @@ const INDUSTRIES = [
 
 export default function WhoWeWorkWith() {
     return (
-        <section className="py-12 md:py-20 bg-[#FFFFFF] px-4 md:px-8">
+        <section className="py-12 md:py-20 bg-background px-4 md:px-8">
             <div className="container mx-auto max-w-6xl">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-cal font-bold text-[#1a1a1a] mb-6">
@@ -32,12 +32,12 @@ export default function WhoWeWorkWith() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.1, duration: 0.5 }}
-                            className="bg-white p-8 rounded-2xl flex flex-col items-center justify-center text-center hover:shadow-lg transition-shadow duration-300"
+                            className="bg-card p-8 rounded-2xl flex flex-col items-center justify-center text-center hover:shadow-lg transition-shadow duration-300"
                         >
-                            <div className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center mb-4 text-[#2ba0fe]">
+                            <div className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center mb-4 text-primary">
                                 <industry.icon size={24} />
                             </div>
-                            <h3 className="font-bold font-cal text-lg text-[#1a1a1a]">
+                            <h3 className="font-bold font-cal text-lg text-card-foreground">
                                 {industry.name}
                             </h3>
                         </motion.div>

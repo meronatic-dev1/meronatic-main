@@ -46,7 +46,7 @@ export default function Services() {
     const [activeIndex, setActiveIndex] = useState(0);
 
     return (
-        <section id="services" className="py-12 md:py-24 bg-[#FFFFFF] relative overflow-hidden min-h-screen flex flex-col justify-center">
+        <section id="services" className="py-12 md:py-24 bg-background relative overflow-hidden min-h-screen flex flex-col justify-center">
             {/* Dynamic Background Text - Marquee Effect */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full pointer-events-none select-none z-0 overflow-hidden">
                 <AnimatePresence mode="wait">

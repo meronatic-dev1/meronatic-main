@@ -73,24 +73,24 @@ export default function ServicesPage() {
     });
 
     return (
-        <main className="min-h-screen bg-[#FFFFFF] text-[#1a1a1a]">
+        <main className="min-h-screen bg-background text-foreground">
             <Header />
 
             {/* Sticky Header Section */}
-            <section className="relative min-h-[60vh] md:min-h-[80vh] flex flex-col items-center justify-center pt-20 px-4 md:px-8 text-center bg-white">
-                <span className="text-[#2ba0fe] font-medium tracking-widest uppercase text-sm mb-4 block">
+            <section className="relative min-h-[60vh] md:min-h-[80vh] flex flex-col items-center justify-center pt-20 px-4 md:px-8 text-center bg-background">
+                <span className="text-brand-blue font-medium tracking-widest uppercase text-sm mb-4 block">
                     Our Expertise
                 </span>
-                <h1 className="text-5xl md:text-[80px] font-cal font-bold text-[#1a1a1a] mb-8 leading-none">
-                    Systems for Scale
+                <h1 className="text-5xl md:text-7xl font-cal font-bold mb-6 text-foreground">
+                    Systems for Scale.
                 </h1>
-                <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                    We don't offer a menu of disparate services. We provide integrated solutions designed to solve specific growth challenges.
+                <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                    We don't offer a menu of services. We build the exact infrastructure your company needs to grow profitably.
                 </p>
             </section>
 
             {/* Scrollable Sticky Cards Section */}
-            <section ref={containerRef} id="services-list" className="relative bg-[#FFFFFF] pb-32">
+            <section ref={containerRef} id="services-list" className="relative bg-background pb-32">
                 <div className="container mx-auto px-4">
                     {/* Title Placeholder to maintain scroll space if needed, or just let cards take over */}
 

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function MarketReality() {
     return (
-        <section className="py-24 md:py-32 bg-white text-black px-4 md:px-8">
+        <section className="py-24 md:py-32 bg-background text-foreground px-4 md:px-8">
             <div className="container mx-auto max-w-6xl">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
                     {/* Left: Heading */}

@@ -17,12 +17,12 @@ export default function RecentWorks() {
     const headerOpacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
 
     return (
-        <section ref={containerRef} id="works" className="relative bg-[#FFFFFF] pb-16 md:pb-32 px-2 md:px-4">
+        <section ref={containerRef} id="works" className="relative bg-background pb-16 md:pb-32 px-2 md:px-4">
             <div className="w-full h-full">
                 {/* Header Title - Sticky */}
                 <motion.div
                     style={{ opacity: headerOpacity }}
-                    className="sticky top-0 z-0 h-screen flex flex-col items-center pt-20 md:pt-32 select-none pointer-events-none overflow-hidden box-content"
+                    className="sticky top-0 z-10 w-full py-6 bg-background/80 backdrop-blur-sm mb-8 flex items-end justify-between border-b border-border"
                 >
                     <span className="text-[#5c5c5c] font-inter text-sm mb-4 block tracking-tight">(Selected Projects)</span>
                     <motion.h2

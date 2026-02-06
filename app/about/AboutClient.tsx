@@ -44,11 +44,11 @@ export default function AboutPage() {
     });
 
     return (
-        <main className="min-h-screen bg-white text-[#1a1a1a]">
+        <main className="min-h-screen bg-background text-foreground">
             <Header />
 
-            {/* Sticky Header Section */}
-            <section className="relative min-h-[60vh] md:min-h-[80vh] flex flex-col items-center justify-center pt-20 px-4 md:px-8 text-center bg-white">
+            {/* Minimal Hero */}
+            <section className="relative min-h-[60vh] md:min-h-[80vh] flex flex-col items-center justify-center pt-20 px-4 md:px-8 text-center bg-background">
                 <span className="text-[#2ba0fe] font-medium tracking-widest uppercase text-sm mb-4 block">
                     About Meronatic
                 </span>
@@ -61,7 +61,7 @@ export default function AboutPage() {
             </section>
 
             {/* Scrollable Sticky Cards Section */}
-            <section ref={containerRef} id="about-list" className="relative bg-[#FFFFFF] pb-32">
+            <section ref={containerRef} id="about-list" className="relative bg-background pb-32">
                 <div className="container mx-auto px-4">
                     <div className="relative z-10 -mt-[10vh]">
                         {ABOUT_SECTIONS.map((section, i) => {

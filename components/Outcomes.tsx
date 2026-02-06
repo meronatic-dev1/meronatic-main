@@ -12,7 +12,7 @@ const METRICS = [
 
 export default function Outcomes() {
     return (
-        <section className="py-12 md:py-20 bg-white text-black px-4 md:px-8 border-b border-gray-100">
+        <section className="py-12 md:py-20 bg-background text-foreground px-4 md:px-8 border-b border-border">
             <div className="container mx-auto max-w-6xl">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <span className="text-[#2ba0fe] font-medium tracking-widest uppercase text-sm mb-4 block">
