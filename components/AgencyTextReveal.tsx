@@ -33,14 +33,14 @@ export default function AgencyTextReveal() {
     const words = text.split(" ");
 
     return (
-        <section className="bg-background py-20 overflow-hidden relative">
+        <section className="bg-background py-6 md:py-16 overflow-hidden relative">
 
 
 
             {/* 2. Slanted Tickers (Background) */}
-            <div className="relative w-full h-[250px] md:h-[300px] my-6 md:my-12 flex items-center justify-center overflow-hidden z-0 opacity-100">
+            <div className="relative w-full h-[180px] md:h-[250px] my-0 md:my-8 flex items-center justify-center overflow-hidden z-0 opacity-100">
                 {/* Ticker 1 - Orange/Red Theme */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] bg-[#2ba0fe] text-white -rotate-5 py-4 shadow-lg z-0">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] bg-[#2ba0fe] text-white -rotate-12 md:-rotate-5 py-4 shadow-lg z-0">
                     <div className="absolute top-0 left-0 w-32 md:w-64 h-full bg-gradient-to-r from-[#2ba0fe] to-transparent z-10" />
                     <div className="absolute top-0 right-0 w-32 md:w-64 h-full bg-gradient-to-l from-[#2ba0fe] to-transparent z-10" />
 
@@ -55,7 +55,7 @@ export default function AgencyTextReveal() {
                     </div>
                 </div>
                 {/* Ticker 2 - Black Theme */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] bg-[#151515] text-white rotate-5 py-4 shadow-lg z-10">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] bg-[#151515] text-white rotate-12 md:rotate-5 py-4 shadow-lg z-10">
                     <div className="absolute top-0 left-0 w-32 md:w-64 h-full bg-gradient-to-r from-[#151515] to-transparent z-10" />
                     <div className="absolute top-0 right-0 w-32 md:w-64 h-full bg-gradient-to-l from-[#151515] to-transparent z-10" />
 
@@ -73,8 +73,8 @@ export default function AgencyTextReveal() {
 
 
             {/* 3. Scroll Text Reveal */}
-            <div className="container mx-auto px-4 relative z-10 mt-16 md:mt-48 text-center max-w-5xl" ref={containerRef}>
-                <h2 className="text-[40px] md:text-[46px] font-cal leading-[1.1] font-bold text-[#131313] flex flex-wrap justify-center gap-x-4 gap-y-2">
+            <div className="container mx-auto px-4 relative z-10 mt-8 md:mt-48 text-center max-w-5xl" ref={containerRef}>
+                <h2 className="text-[40px] md:text-[46px] font-cal leading-[1.1] font-bold text-foreground flex flex-wrap justify-center gap-x-4 gap-y-2">
                     {words.map((word, i) => {
                         const start = i / words.length;
                         const end = start + (1 / words.length);

@@ -46,7 +46,7 @@ export default function Services() {
     const [activeIndex, setActiveIndex] = useState(0);
 
     return (
-        <section id="services" className="py-12 md:py-24 bg-background relative overflow-hidden min-h-screen flex flex-col justify-center">
+        <section id="services" className="py-12 md:py-24 bg-background relative overflow-hidden min-h-screen flex flex-col justify-center z-20">
             {/* Dynamic Background Text - Marquee Effect */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full pointer-events-none select-none z-0 overflow-hidden">
                 <AnimatePresence mode="wait">
@@ -76,23 +76,22 @@ export default function Services() {
             <div className="container mx-auto px-4 relative z-10">
                 <div className="flex flex-col items-start mb-16 max-w-6xl mx-auto w-full">
                     <div className="text-left mb-12">
-                        <span className="text-gray-500 font-inter text-sm mb-4 block tracking-wide uppercase">(Services)</span>
-                        <h2 className="text-4xl md:text-7xl font-cal font-bold text-[#1a1a1a]">What we do</h2>
+                        <span className="text-brand-blue font-inter text-sm mb-4 block tracking-wide uppercase">(Services)</span>
+                        <h2 className="text-4xl md:text-7xl font-cal font-bold text-foreground">What we do</h2>
                     </div>
 
                     {/* Tab Navigation */}
-                    {/* Tab Navigation */}
-                    <div className="flex w-full justify-between items-center border-b border-gray-200 pb-4">
+                    <div className="flex w-full overflow-x-auto no-scrollbar gap-8 items-center border-b border-border pb-4 mask-linear-fade">
                         {SERVICES.map((service, index) => (
                             <button
                                 key={index}
                                 onClick={() => setActiveIndex(index)}
-                                className={`text-xs md:text-xl font-cal transition-all duration-300 relative px-2 py-2 whitespace-nowrap ${activeIndex === index ? 'text-[#2ba0fe]' : 'text-gray-400 hover:text-gray-600'
+                                className={`text-sm md:text-xl font-cal transition-all duration-300 relative px-2 py-2 whitespace-nowrap flex-shrink-0 ${activeIndex === index ? 'text-brand-blue' : 'text-muted-foreground hover:text-foreground'
                                     }`}
                             >
                                 <div className="flex items-center gap-2">
                                     {activeIndex === index && (
-                                        <div className="w-1.5 h-1.5 rounded-full bg-[#2ba0fe]" />
+                                        <div className="w-1.5 h-1.5 rounded-full bg-brand-blue" />
                                     )}
                                     {service.title}
                                 </div>
@@ -113,7 +112,7 @@ export default function Services() {
                             className="flex flex-col items-center gap-8"
                         >
                             {/* Image - Centered */}
-                            <div className="aspect-[16/9] w-full max-w-4xl rounded-[2rem] overflow-hidden bg-gray-200 relative group shadow-2xl">
+                            <div className="aspect-[16/9] w-full max-w-4xl rounded-[2rem] overflow-hidden bg-muted relative group shadow-2xl">
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img
                                     src={SERVICES[activeIndex].image}
@@ -128,7 +127,7 @@ export default function Services() {
                                     initial={{ opacity: 0, y: 10 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.2 }}
-                                    className="text-gray-600 text-xl md:text-2xl leading-relaxed mb-8"
+                                    className="text-muted-foreground text-xl md:text-2xl leading-relaxed mb-8"
                                 >
                                     {SERVICES[activeIndex].description}
                                 </motion.p>

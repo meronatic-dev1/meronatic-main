@@ -7,7 +7,6 @@ import Testimonials from "@/components/Testimonials";
 import MeronaticDifference from "@/components/MeronaticDifference";
 import AscendFramework from "@/components/AscendFramework";
 import Services from "@/components/Services";
-import Outcomes from "@/components/Outcomes";
 import RecentWorks from "@/components/RecentWorks";
 import WhoWeWorkWith from "@/components/WhoWeWorkWith";
 import BrandSummary from "@/components/BrandSummary";
@@ -31,7 +30,6 @@ export default function Home() {
       <MeronaticDifference />
       <AscendFramework />
       <Services />
-      <Outcomes />
       <RecentWorks />
       <WhoWeWorkWith />
       <BrandSummary />

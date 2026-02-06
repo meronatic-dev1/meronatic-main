@@ -26,7 +26,7 @@ export default function RootLayout({
             <body className={clsx(inter.variable, "antialiased selection:bg-brand-blue selection:text-white")}>
                 <ThemeProvider
                     attribute="class"
-                    defaultTheme="system"
+                    defaultTheme="light"
                     enableSystem
                     disableTransitionOnChange
                 >

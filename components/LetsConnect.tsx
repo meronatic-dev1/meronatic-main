@@ -8,13 +8,13 @@ export default function LetsConnect() {
         <section className="relative py-12 md:py-24 bg-background overflow-hidden flex flex-col items-center justify-center min-h-[80vh]">
 
             {/* Large Background Text - Testimonials Style */}
-            <div className="absolute top-70 left-1/2 -translate-x-1/2 z-0 w-full text-center pointer-events-none select-none">
+            <div className="absolute top-10 md:top-40 left-1/2 -translate-x-1/2 z-0 w-full text-center pointer-events-none select-none">
                 <motion.h2
                     initial={{ y: 100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 1, ease: "easeOut" }}
                     viewport={{ once: true }}
-                    className="text-[15vw] lg:text-[200px] font-bold font-cal text-[#D4D4D4] whitespace-nowrap leading-none tracking-tight opacity-20"
+                    className="text-[15vw] lg:text-[220px] font-bold font-cal text-[#D4D4D4] whitespace-nowrap leading-none tracking-tight"
                     style={{
                         maskImage: 'linear-gradient(to bottom, black 30%, transparent 100%)',
                         WebkitMaskImage: 'linear-gradient(to bottom, black 30%, transparent 100%)'
