@@ -4,7 +4,7 @@ import React, { useRef } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import LetsConnect from '@/components/LetsConnect';
-import { useScroll } from 'framer-motion';
+import { useScroll, motion } from 'framer-motion';
 import StickyAboutCard from '@/components/StickyAboutCard';
 
 const ABOUT_SECTIONS = [
@@ -47,23 +47,27 @@ export default function AboutPage() {
         <main className="min-h-screen bg-background text-foreground">
             <Header />
 
-            {/* Minimal Hero */}
-            <section className="relative min-h-[60vh] md:min-h-[80vh] flex flex-col items-center justify-center pt-20 px-4 md:px-8 text-center bg-background">
-                <span className="text-[#2ba0fe] font-medium tracking-widest uppercase text-sm mb-4 block">
-                    About Meronatic
-                </span>
-                <h1 className="text-5xl md:text-[80px] font-cal font-bold text-[#1a1a1a] mb-8 leading-none">
-                    We build the systems<br />that build your business.
-                </h1>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                    Meronatic Solutions bridges the gap between manual operations and high-performance digital revenue engines.
-                </p>
-            </section>
+            {/* Sticky Header Section */}
+            <div className="sticky top-0 z-0 h-screen flex flex-col items-center pt-32 select-none pointer-events-none overflow-hidden box-content">
+                <span className="text-[#5c5c5c] font-inter text-sm mb-4 block tracking-tight">(Who We Are)</span>
+                <motion.h2
+                    initial={{ y: 100, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    viewport={{ once: true }}
+                    className="text-[13vw] lg:text-[220px] font-bold font-cal text-[#D4D4D4] whitespace-nowrap leading-none tracking-tight"
+                    style={{
+                        maskImage: 'linear-gradient(to bottom, black 30%, transparent 100%)',
+                        WebkitMaskImage: 'linear-gradient(to bottom, black 30%, transparent 100%)'
+                    }}
+                >
+                    About Us
+                </motion.h2>
+            </div>
 
-            {/* Scrollable Sticky Cards Section */}
             <section ref={containerRef} id="about-list" className="relative bg-background pb-32">
                 <div className="container mx-auto px-4">
-                    <div className="relative z-10 -mt-[10vh]">
+                    <div className="relative z-50 -mt-[75vh]">
                         {ABOUT_SECTIONS.map((section, i) => {
                             const step = 1 / ABOUT_SECTIONS.length;
                             const rangeStart = i * step;

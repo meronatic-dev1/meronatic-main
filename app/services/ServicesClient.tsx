@@ -77,24 +77,30 @@ export default function ServicesPage() {
             <Header />
 
             {/* Sticky Header Section */}
-            <section className="relative min-h-[60vh] md:min-h-[80vh] flex flex-col items-center justify-center pt-20 px-4 md:px-8 text-center bg-background">
-                <span className="text-brand-blue font-medium tracking-widest uppercase text-sm mb-4 block">
-                    Our Expertise
-                </span>
-                <h1 className="text-5xl md:text-7xl font-cal font-bold mb-6 text-foreground">
-                    Systems for Scale.
-                </h1>
-                <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                    We don't offer a menu of services. We build the exact infrastructure your company needs to grow profitably.
-                </p>
-            </section>
-
-            {/* Scrollable Sticky Cards Section */}
             <section ref={containerRef} id="services-list" className="relative bg-background pb-32">
+
+                {/* Header Title - Sticky */}
+                <div className="sticky top-0 z-0 h-screen flex flex-col items-center pt-32 select-none pointer-events-none overflow-hidden box-content">
+                    <span className="text-[#5c5c5c] font-inter text-sm mb-4 block tracking-tight">(What We Do)</span>
+                    <motion.h2
+                        initial={{ y: 100, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 1, ease: "easeOut" }}
+                        viewport={{ once: true }}
+                        className="text-[13vw] lg:text-[220px] font-bold font-cal text-[#D4D4D4] whitespace-nowrap leading-none tracking-tight"
+                        style={{
+                            maskImage: 'linear-gradient(to bottom, black 30%, transparent 100%)',
+                            WebkitMaskImage: 'linear-gradient(to bottom, black 30%, transparent 100%)'
+                        }}
+                    >
+                        Our Expertise
+                    </motion.h2>
+                </div>
+
                 <div className="container mx-auto px-4">
                     {/* Title Placeholder to maintain scroll space if needed, or just let cards take over */}
 
-                    <div className="relative z-10 -mt-[20vh] md:-mt-[10vh]">
+                    <div className="relative z-50 -mt-[75vh]">
                         {DETAILED_SERVICES.map((service, i) => {
                             const step = 1 / DETAILED_SERVICES.length;
                             const rangeStart = i * step;

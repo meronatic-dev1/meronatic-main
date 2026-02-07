@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { AnimatedList } from "@/components/ui/animated-list";
-import { Rocket, Crosshair, ShieldCheck, Magnet, AppWindow, LayoutGrid, MousePointer2, Gauge, BarChart3, Workflow } from "lucide-react";
+import { Code2, Smartphone, Palette, LineChart, Megaphone, Award, SearchCheck, Bot, Pencil } from "lucide-react";
 
 interface Item {
     name: string;
@@ -12,54 +12,49 @@ interface Item {
 
 let services = [
     {
-        name: "Growth Strategy",
-        icon: <Rocket className="h-6 w-6 text-white" />,
-        color: "#00C9A7",
-    },
-    {
-        name: "Market Positioning",
-        icon: <Crosshair className="h-6 w-6 text-white" />,
-        color: "#FFB800",
-    },
-    {
-        name: "Brand Authority",
-        icon: <ShieldCheck className="h-6 w-6 text-white" />,
-        color: "#FF3D71",
-    },
-    {
-        name: "Demand Generation",
-        icon: <Magnet className="h-6 w-6 text-white" />,
-        color: "#1E86FF",
-    },
-    {
-        name: "Digital Platforms",
-        icon: <AppWindow className="h-6 w-6 text-white" />,
+        name: "Web Development",
+        icon: <Code2 className="h-6 w-6 text-white" />,
         color: "#9b59b6",
     },
     {
-        name: "UI/UX Systems",
-        icon: <LayoutGrid className="h-6 w-6 text-white" />,
+        name: "Mobile App Development",
+        icon: <Smartphone className="h-6 w-6 text-white" />,
+        color: "#1E86FF",
+    },
+    {
+        name: "UI/UX Design",
+        icon: <Palette className="h-6 w-6 text-white" />,
         color: "#2ecc71",
     },
     {
-        name: "Conversion Optimization",
-        icon: <MousePointer2 className="h-6 w-6 text-white" />,
-        color: "#e67e22",
-    },
-    {
-        name: "Performance Marketing",
-        icon: <Gauge className="h-6 w-6 text-white" />,
-        color: "#e74c3c",
-    },
-    {
         name: "Data & Analytics",
-        icon: <BarChart3 className="h-6 w-6 text-white" />,
+        icon: <LineChart className="h-6 w-6 text-white" />,
         color: "#34495e",
     },
     {
-        name: "Scale Operations",
-        icon: <Workflow className="h-6 w-6 text-white" />,
+        name: "Digital Marketing",
+        icon: <Megaphone className="h-6 w-6 text-white" />,
+        color: "#e74c3c",
+    },
+    {
+        name: "Branding",
+        icon: <Award className="h-6 w-6 text-white" />,
+        color: "#FF3D71",
+    },
+    {
+        name: "SEO Optimization",
+        icon: <SearchCheck className="h-6 w-6 text-white" />,
+        color: "#e67e22",
+    },
+    {
+        name: "Automation",
+        icon: <Bot className="h-6 w-6 text-white" />,
         color: "#1abc9c",
+    },
+    {
+        name: "Content Creation",
+        icon: <Pencil className="h-6 w-6 text-white" />,
+        color: "#FFB800",
     },
 ];
 

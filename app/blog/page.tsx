@@ -1,10 +1,10 @@
 'use client';
 
-import React from 'react';
+import React, { useRef } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import LetsConnect from '@/components/LetsConnect';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 
 // Customized dummy data matching the design aesthetic
@@ -66,53 +66,51 @@ const BLOG_POSTS = [
 ];
 
 export default function BlogPage() {
+    const containerRef = useRef<HTMLDivElement>(null);
+    const { scrollYProgress } = useScroll();
+    const headerOpacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
+
     return (
         <main className="min-h-screen bg-[rgba(255, 255, 255, 1)] text-[rgb(19,19,19)]"> {/* Exact bg from computed style */}
             <Header />
 
-            {/* Hero Section */}
-            <section
-                className="relative flex flex-col items-center justify-center overflow-hidden min-h-[60vh]"
-                style={{
-                    backgroundColor: 'rgba(255, 255, 255, 1)',
-                    borderBottomLeftRadius: '32px',
-                    borderBottomRightRadius: '32px',
-                    maxWidth: '1920px',
-                    margin: '0 auto'
-                }}
+            {/* Sticky Header Section */}
+            <motion.div
+                style={{ opacity: headerOpacity }}
+                className="sticky top-0 z-0 h-screen flex flex-col items-center pt-32 select-none pointer-events-none overflow-hidden box-content"
             >
-                <div className="absolute top-70 left-1/2 -translate-x-1/2 z-0 w-full text-center pointer-events-none select-none">
-                    <span className="text-[#5c5c5c] font-inter text-sm mb-4 block tracking-tight">(News & Articles)</span>
-                    <motion.h2
-                        initial={{ y: 100, opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
-                        transition={{ duration: 1, ease: "easeOut" }}
-                        viewport={{ once: true }}
-                        className="text-[25vw] lg:text-[220px] font-bold font-cal text-[#D4D4D4] whitespace-nowrap leading-none tracking-tight"
-                        style={{
-                            maskImage: 'linear-gradient(to bottom, black 30%, transparent 100%)',
-                            WebkitMaskImage: 'linear-gradient(to bottom, black 30%, transparent 100%)'
-                        }}
-                    >
-                        Insights
-                    </motion.h2>
-                </div>
-            </section>
+                <span className="text-[#5c5c5c] font-inter text-sm mb-4 block tracking-tight">(News & Articles)</span>
+                <motion.h2
+                    initial={{ y: 100, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    viewport={{ once: true }}
+                    className="text-[25vw] lg:text-[220px] font-bold font-cal text-[#D4D4D4] whitespace-nowrap leading-none tracking-tight"
+                    style={{
+                        maskImage: 'linear-gradient(to bottom, black 30%, transparent 100%)',
+                        WebkitMaskImage: 'linear-gradient(to bottom, black 30%, transparent 100%)'
+                    }}
+                >
+                    Insights
+                </motion.h2>
+            </motion.div>
 
             {/* Blog Grid Section */}
-            <section className="py-24 md:py-32">
+            <section ref={containerRef} className="relative pb-32 bg-[rgba(255, 255, 255, 1)]">
                 <div className="container mx-auto px-4 max-w-[1520px]">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[24px]"> {/* Exact gap */}
-                        {BLOG_POSTS.map((post, i) => (
-                            <BlogCard key={post.id} post={post} index={i} />
-                        ))}
-                    </div>
+                    <div className="relative z-50 -mt-[75vh]">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[24px]"> {/* Exact gap */}
+                            {BLOG_POSTS.map((post, i) => (
+                                <BlogCard key={post.id} post={post} index={i} />
+                            ))}
+                        </div>
 
-                    {/* Load More / Pagination Button */}
-                    <div className="mt-24 flex justify-center">
-                        <button className="px-8 py-4 rounded-full border border-[#131313] text-[#131313] font-medium font-inter hover:bg-[#131313] hover:text-white transition-all duration-300">
-                            Load More Articles
-                        </button>
+                        {/* Load More / Pagination Button */}
+                        <div className="mt-24 flex justify-center">
+                            <button className="px-8 py-4 rounded-full border border-[#131313] text-[#131313] font-medium font-inter hover:bg-[#131313] hover:text-white transition-all duration-300">
+                                Load More Articles
+                            </button>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -159,12 +157,12 @@ function BlogCard({ post, index }: { post: typeof BLOG_POSTS[0], index: number }
             {/* Content */}
             <div className="flex flex-col gap-3">
                 <div className="flex items-center justify-between">
-                    <span className="text-xs font-medium text-[rgb(255,77,0)] uppercase tracking-wider">{post.category}</span>
+                    <span className="text-xs font-medium text-[#2ba0fe] uppercase tracking-wider">{post.category}</span>
                     <span className="text-xs text-gray-400">{post.date}</span>
                 </div>
 
                 <h3
-                    className="font-inter font-normal text-[rgb(19,19,19)] group-hover:text-[rgb(255,77,0)] transition-colors duration-300"
+                    className="font-inter font-normal text-[rgb(19,19,19)] group-hover:text-[#2ba0fe] transition-colors duration-300"
                     style={{
                         fontSize: '18px',
                         marginBottom: '0px'
