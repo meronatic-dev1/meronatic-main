@@ -1,0 +1,57 @@
+
+> framer-clone@0.1.0 build
+> next build
+
+▲ Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...
+Error: Could not resolve value for theme function: `theme(colors.background)`. Consider checking if the path is correct or provide a fallback value to silence this error.
+    [2m[at Object.po [as theme] (C:\Users\Ajzal\OneDrive\Desktop\New folder (3)\framer-clone\node_modules\tailwindcss\dist\lib.js:13:4834)][0m
+    [2m[at C:\Users\Ajzal\OneDrive\Desktop\New folder (3)\framer-clone\node_modules\tailwindcss\dist\lib.js:13:5515)][0m
+    [2m[at Rr (C:\Users\Ajzal\OneDrive\Desktop\New folder (3)\framer-clone\node_modules\tailwindcss\dist\lib.js:3:1718)][0m
+    [2m[at _ (C:\Users\Ajzal\OneDrive\Desktop\New folder (3)\framer-clone\node_modules\tailwindcss\dist\lib.js:3:1377)][0m
+    [2m[at ei (C:\Users\Ajzal\OneDrive\Desktop\New folder (3)\framer-clone\node_modules\tailwindcss\dist\lib.js:13:5407)][0m
+    [2m[at C:\Users\Ajzal\OneDrive\Desktop\New folder (3)\framer-clone\node_modules\tailwindcss\dist\lib.js:13:5179)][0m
+    [2m[at Rr (C:\Users\Ajzal\OneDrive\Desktop\New folder (3)\framer-clone\node_modules\tailwindcss\dist\lib.js:3:1718)][0m
+    [2m[at _ (C:\Users\Ajzal\OneDrive\Desktop\New folder (3)\framer-clone\node_modules\tailwindcss\dist\lib.js:3:1377)][0m
+    [2m[at Fe (C:\Users\Ajzal\OneDrive\Desktop\New folder (3)\framer-clone\node_modules\tailwindcss\dist\lib.js:13:5104)][0m
+    [2m[at un (C:\Users\Ajzal\OneDrive\Desktop\New folder (3)\framer-clone\node_modules\tailwindcss\dist\lib.js:38:283)][0m
+
+> Build error occurred
+Error: Turbopack build failed with 2 errors:
+./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\Users\Ajzal\OneDrive\Desktop\New folder (3)\framer-clone\app\globals.css:1:1: Could not resolve value for theme function: `theme(colors.background)`. Consider checking if the path is correct or provide a fallback value to silence this error.
+    at Input.error (node_modules/postcss/lib/input.js:135:16) [C:\Users\Ajzal\OneDrive\Desktop\New folder (3)\framer-clone\.next\build\chunks\node_modules_fe693df6._.js:4651:22]
+    at Root.error (node_modules/postcss/lib/node.js:146:32) [C:\Users\Ajzal\OneDrive\Desktop\New folder (3)\framer-clone\.next\build\chunks\node_modules_fe693df6._.js:928:38]
+    [at Object.Once (C:\Users\Ajzal\OneDrive\Desktop\New folder (3)\framer-clone\node_modules\@tailwindcss\postcss\dist\index.js:10:6911)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:105:5)]
+    at async LazyResult.runAsync (node_modules/postcss/lib/lazy-result.js:293:11) [C:\Users\Ajzal\OneDrive\Desktop\New folder (3)\framer-clone\.next\build\chunks\node_modules_fe693df6._.js:6206:21]
+    at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34) [C:\Users\Ajzal\OneDrive\Desktop\New folder (3)\framer-clone\.next\build\chunks\[root-of-the-server]__51225daf._.js:146:36]
+    at async run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:23) [C:\Users\Ajzal\OneDrive\Desktop\New folder (3)\framer-clone\.next\build\chunks\[root-of-the-server]__974941ed._.js:443:31]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+./app/layout.tsx
+Module not found: Can't resolve 'next/font/local/target.css'
+unexpected data version
+
+Debug info:
+- Execution of <ModuleAssetContext as AssetContext>::resolve_asset failed
+- Execution of resolve failed
+- Execution of <NextFontLocalResolvePlugin as BeforeResolvePlugin>::before_resolve failed
+- Execution of get_font_fallbacks failed
+- unexpected data version
+Import map: aliased to module 'next' with subpath '/font/local/target.css' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34) [C:\Users\Ajzal\OneDrive\Desktop\New folder (3)\framer-clone\.next\build\chunks\[root-of-the-server]__51225daf._.js:146:36])
+    at async run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:23) [C:\Users\Ajzal\OneDrive\Desktop\New folder (3)\framer-clone\.next\build\chunks\[root-of-the-server]__974941ed._.js:443:31])
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
