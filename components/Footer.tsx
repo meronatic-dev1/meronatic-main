@@ -41,11 +41,11 @@ export default function Footer() {
                 <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-0">
 
                     {/* Contact - Left Side */}
-                    <div className="flex flex-col gap-6 lg:max-w-[400px]">
-                        <h4 className="text-[14px] font-normal text-[#ffffff]">Contact</h4>
+                    <div className="flex flex-col items-center lg:items-start gap-8 lg:max-w-[400px]">
+                        <h4 className="text-[14px] font-normal text-[#ffffff] text-center lg:text-left">Contact</h4>
                         <ul className="flex flex-col gap-6">
                             <li>
-                                <a href="tel:+971564591737" className="group flex items-center gap-4 text-[18px] md:text-[20px] font-medium text-white hover:text-white/80 transition-opacity tracking-tight">
+                                <a href="tel:+971564591737" className="group flex flex-col lg:flex-row items-center gap-4 text-[18px] md:text-[20px] font-medium text-white hover:text-white/80 transition-opacity tracking-tight">
                                     <div className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 group-hover:bg-white/20 transition-colors">
                                         <Phone size={20} className="text-[#2ba0fe]" />
                                     </div>
@@ -53,18 +53,18 @@ export default function Footer() {
                                 </a>
                             </li>
                             <li>
-                                <a href="mailto:info@meronaticpro.com" className="group flex items-center gap-4 text-[18px] md:text-[20px] font-medium text-white hover:text-white/80 transition-opacity tracking-tight">
+                                <a href="mailto:info@meronaticpro.com" className="group flex flex-col lg:flex-row items-center gap-4 text-[18px] md:text-[20px] font-medium text-white hover:text-white/80 transition-opacity tracking-tight">
                                     <div className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 group-hover:bg-white/20 transition-colors">
                                         <Mail size={20} className="text-[#2ba0fe]" />
                                     </div>
                                     <span>info@meronaticpro.com</span>
                                 </a>
                             </li>
-                            <li className="flex items-start gap-4">
+                            <li className="flex flex-col lg:flex-row items-center lg:items-start gap-4">
                                 <div className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 shrink-0">
                                     <MapPin size={20} className="text-[#2ba0fe]" />
                                 </div>
-                                <span className="text-[18px] md:text-[20px] font-medium text-white block max-w-[350px]">
+                                <span className="text-[18px] md:text-[20px] font-medium text-white block max-w-[350px] text-center lg:text-left">
                                     Meydan road, Nad Al Sheba, Dubai
                                 </span>
                             </li>
@@ -74,9 +74,9 @@ export default function Footer() {
                     {/* Links - Right Side */}
                     <div className="flex flex-col md:flex-row gap-12 md:gap-[60px] lg:gap-[80px]">
                         {/* Navigation */}
-                        <div className="flex flex-col gap-8">
-                            <h4 className="text-[14px] font-normal text-[#ffffff]">Navigation</h4>
-                            <ul className="flex flex-col gap-4">
+                        <div className="flex flex-col items-center md:items-start gap-8">
+                            <h4 className="text-[14px] font-normal text-[#ffffff] text-center md:text-left">Navigation</h4>
+                            <ul className="flex flex-col items-center md:items-start gap-4">
                                 {['About', 'Works', 'Services', 'Blog'].map((item) => (
                                     <li key={item}>
                                         <a href="#" className="text-[18px] md:text-[20px] font-medium text-white hover:text-[#2ba0fe] transition-colors tracking-tight">
@@ -88,9 +88,9 @@ export default function Footer() {
                         </div>
 
                         {/* Socials */}
-                        <div className="flex flex-col gap-8">
-                            <h4 className="text-[14px] font-normal text-[#ffffff]">Social</h4>
-                            <ul className="flex flex-col gap-4">
+                        <div className="flex flex-col items-center md:items-start gap-8">
+                            <h4 className="text-[14px] font-normal text-[#ffffff] text-center md:text-left">Social</h4>
+                            <ul className="flex flex-col items-center md:items-start gap-4">
                                 {['Twitter(X)', 'LinkedIn', 'Dribble'].map((item) => (
                                     <li key={item}>
                                         <a href="#" className="text-[18px] md:text-[20px] font-medium text-white hover:text-[#2ba0fe] transition-colors tracking-tight">
@@ -102,9 +102,9 @@ export default function Footer() {
                         </div>
 
                         {/* Legals */}
-                        <div className="flex flex-col gap-8">
-                            <h4 className="text-[14px] font-normal text-[#ffffff]">Legals</h4>
-                            <ul className="flex flex-col gap-4">
+                        <div className="flex flex-col items-center md:items-start gap-8">
+                            <h4 className="text-[14px] font-normal text-[#ffffff] text-center md:text-left">Legals</h4>
+                            <ul className="flex flex-col items-center md:items-start gap-4">
                                 {['Privacy Policy', 'Term of Service'].map((item) => (
                                     <li key={item}>
                                         <a href="#" className="text-[18px] md:text-[20px] font-medium text-white hover:text-[#2ba0fe] transition-colors tracking-tight">
