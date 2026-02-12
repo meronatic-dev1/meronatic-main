@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 
 export default function Footer() {
     const [time, setTime] = useState('');
@@ -37,48 +38,82 @@ export default function Footer() {
 
             {/* Main Content Container */}
             <div className="container mx-auto px-6 md:px-[100px] relative z-20">
-                <div className="flex flex-col md:flex-row gap-12 md:gap-[180px]">
+                <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-0">
 
-                    {/* Navigation */}
-                    <div className="flex flex-col gap-8">
-                        <h4 className="text-[14px] font-normal text-[#ffffff]">Navigation</h4>
-                        <ul className="flex flex-col gap-4">
-                            {['About', 'Works', 'Services', 'Blog'].map((item) => (
-                                <li key={item}>
-                                    <a href="#" className="text-[24px] md:text-[28px] font-bold text-white hover:text-white/80 transition-opacity tracking-tight">
-                                        {item}
-                                    </a>
-                                </li>
-                            ))}
+                    {/* Contact - Left Side */}
+                    <div className="flex flex-col gap-6 lg:max-w-[400px]">
+                        <h4 className="text-[14px] font-normal text-[#ffffff]">Contact</h4>
+                        <ul className="flex flex-col gap-6">
+                            <li>
+                                <a href="tel:+971564591737" className="group flex items-center gap-4 text-[18px] md:text-[20px] font-medium text-white hover:text-white/80 transition-opacity tracking-tight">
+                                    <div className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 group-hover:bg-white/20 transition-colors">
+                                        <Phone size={20} className="text-[#2ba0fe]" />
+                                    </div>
+                                    <span>+971 56 459 1737</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:info@meronaticpro.com" className="group flex items-center gap-4 text-[18px] md:text-[20px] font-medium text-white hover:text-white/80 transition-opacity tracking-tight">
+                                    <div className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 group-hover:bg-white/20 transition-colors">
+                                        <Mail size={20} className="text-[#2ba0fe]" />
+                                    </div>
+                                    <span>info@meronaticpro.com</span>
+                                </a>
+                            </li>
+                            <li className="flex items-start gap-4">
+                                <div className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 shrink-0">
+                                    <MapPin size={20} className="text-[#2ba0fe]" />
+                                </div>
+                                <span className="text-[18px] md:text-[20px] font-medium text-white block max-w-[350px]">
+                                    Meydan road, Nad Al Sheba, Dubai
+                                </span>
+                            </li>
                         </ul>
                     </div>
 
-                    {/* Socials */}
-                    <div className="flex flex-col gap-8">
-                        <h4 className="text-[14px] font-normal text-[#ffffff]">Social</h4>
-                        <ul className="flex flex-col gap-4">
-                            {['Twitter(X)', 'LinkedIn', 'Dribble'].map((item) => (
-                                <li key={item}>
-                                    <a href="#" className="text-[24px] md:text-[28px] font-bold text-white hover:text-white/80 transition-opacity tracking-tight">
-                                        {item}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+                    {/* Links - Right Side */}
+                    <div className="flex flex-col md:flex-row gap-12 md:gap-[60px] lg:gap-[80px]">
+                        {/* Navigation */}
+                        <div className="flex flex-col gap-8">
+                            <h4 className="text-[14px] font-normal text-[#ffffff]">Navigation</h4>
+                            <ul className="flex flex-col gap-4">
+                                {['About', 'Works', 'Services', 'Blog'].map((item) => (
+                                    <li key={item}>
+                                        <a href="#" className="text-[18px] md:text-[20px] font-medium text-white hover:text-[#2ba0fe] transition-colors tracking-tight">
+                                            {item}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
 
-                    {/* Legals */}
-                    <div className="flex flex-col gap-8">
-                        <h4 className="text-[14px] font-normal text-[#ffffff]">Legals</h4>
-                        <ul className="flex flex-col gap-4">
-                            {['Privacy Policy', 'Term of Service'].map((item) => (
-                                <li key={item}>
-                                    <a href="#" className="text-[24px] md:text-[28px] font-bold text-white hover:text-white/80 transition-opacity tracking-tight">
-                                        {item}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
+                        {/* Socials */}
+                        <div className="flex flex-col gap-8">
+                            <h4 className="text-[14px] font-normal text-[#ffffff]">Social</h4>
+                            <ul className="flex flex-col gap-4">
+                                {['Twitter(X)', 'LinkedIn', 'Dribble'].map((item) => (
+                                    <li key={item}>
+                                        <a href="#" className="text-[18px] md:text-[20px] font-medium text-white hover:text-[#2ba0fe] transition-colors tracking-tight">
+                                            {item}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Legals */}
+                        <div className="flex flex-col gap-8">
+                            <h4 className="text-[14px] font-normal text-[#ffffff]">Legals</h4>
+                            <ul className="flex flex-col gap-4">
+                                {['Privacy Policy', 'Term of Service'].map((item) => (
+                                    <li key={item}>
+                                        <a href="#" className="text-[18px] md:text-[20px] font-medium text-white hover:text-[#2ba0fe] transition-colors tracking-tight">
+                                            {item}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
