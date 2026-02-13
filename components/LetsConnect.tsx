@@ -1,9 +1,31 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { submitContactForm } from '@/app/actions/contact';
 
 export default function LetsConnect() {
+    const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+
+    async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+        event.preventDefault();
+        setStatus('loading');
+        const formData = new FormData(event.currentTarget);
+
+        try {
+            const result = await submitContactForm(formData);
+            if (result.success) {
+                setStatus('success');
+                (event.target as HTMLFormElement).reset();
+            } else {
+                setStatus('error');
+            }
+        } catch (error) {
+            console.error(error);
+            setStatus('error');
+        }
+    }
+
     return (
         <section id="lets-connect" className="relative py-12 md:py-24 bg-background overflow-hidden flex flex-col items-center justify-center min-h-[80vh]">
 
@@ -75,20 +97,26 @@ export default function LetsConnect() {
 
                         {/* Right Column: Form */}
                         <div className="bg-transparent">
-                            <form className="space-y-10">
+                            <form className="space-y-10" onSubmit={handleSubmit}>
                                 <div>
-                                    <label className="block text-white text-base font-medium mb-2">Your Name</label>
+                                    <label className="block text-white text-base font-medium mb-2" htmlFor="name">Your Name</label>
                                     <input
+                                        id="name"
+                                        name="name"
                                         type="text"
+                                        required
                                         placeholder="Enter your Name"
                                         className="w-full bg-transparent border-b border-gray-700 pb-3 text-gray-300 placeholder-gray-600 focus:outline-none focus:border-white transition-colors"
                                     />
                                 </div>
 
                                 <div>
-                                    <label className="block text-white text-base font-medium mb-2">Your Email</label>
+                                    <label className="block text-white text-base font-medium mb-2" htmlFor="email">Your Email</label>
                                     <input
+                                        id="email"
+                                        name="email"
                                         type="email"
+                                        required
                                         placeholder="Enter the Email"
                                         className="w-full bg-transparent border-b border-gray-700 pb-3 text-gray-300 placeholder-gray-600 focus:outline-none focus:border-white transition-colors"
                                     />
@@ -96,16 +124,20 @@ export default function LetsConnect() {
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                     <div>
-                                        <label className="block text-white text-base font-medium mb-2">Phone</label>
+                                        <label className="block text-white text-base font-medium mb-2" htmlFor="phone">Phone</label>
                                         <input
+                                            id="phone"
+                                            name="phone"
                                             type="tel"
                                             placeholder="Enter your Phone"
                                             className="w-full bg-transparent border-b border-gray-700 pb-3 text-gray-300 placeholder-gray-600 focus:outline-none focus:border-white transition-colors"
                                         />
                                     </div>
                                     <div>
-                                        <label className="block text-white text-base font-medium mb-2">Company</label>
+                                        <label className="block text-white text-base font-medium mb-2" htmlFor="company">Company</label>
                                         <input
+                                            id="company"
+                                            name="company"
                                             type="text"
                                             placeholder="Company Name"
                                             className="w-full bg-transparent border-b border-gray-700 pb-3 text-gray-300 placeholder-gray-600 focus:outline-none focus:border-white transition-colors"
@@ -114,22 +146,46 @@ export default function LetsConnect() {
                                 </div>
 
                                 <div>
-                                    <label className="block text-white text-base font-medium mb-2">Project Description</label>
+                                    <label className="block text-white text-base font-medium mb-2" htmlFor="projectDescription">Project Description</label>
                                     <textarea
+                                        id="projectDescription"
+                                        name="projectDescription"
                                         placeholder="Type Here..."
                                         rows={1}
                                         className="w-full bg-transparent border-b border-gray-700 pb-3 text-gray-300 placeholder-gray-600 focus:outline-none focus:border-white transition-colors resize-none"
                                     />
                                 </div>
 
-                                <motion.button
-                                    whileHover={{ scale: 1.02 }}
-                                    whileTap={{ scale: 0.98 }}
-                                    type="submit"
-                                    className="w-full py-4 rounded-full bg-foreground text-background font-bold text-lg hover:bg-muted-foreground transition-colors mt-4"
-                                >
-                                    Send Now!
-                                </motion.button>
+                                <div className="relative">
+                                    <motion.button
+                                        whileHover={{ scale: 1.02 }}
+                                        whileTap={{ scale: 0.98 }}
+                                        type="submit"
+                                        disabled={status === 'loading' || status === 'success'}
+                                        className="w-full py-4 rounded-full bg-foreground text-background font-bold text-lg hover:bg-muted-foreground transition-colors mt-4 disabled:opacity-50 disabled:cursor-not-allowed"
+                                    >
+                                        {status === 'loading' ? 'Sending...' : status === 'success' ? 'Sent!' : 'Send Now!'}
+                                    </motion.button>
+
+                                    {status === 'success' && (
+                                        <motion.p
+                                            initial={{ opacity: 0, y: 10 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            className="absolute top-full left-0 w-full text-center text-green-500 mt-2 font-medium"
+                                        >
+                                            We'll be in touch soon!
+                                        </motion.p>
+                                    )}
+                                    {status === 'error' && (
+                                        <motion.p
+                                            initial={{ opacity: 0, y: 10 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            className="absolute top-full left-0 w-full text-center text-red-500 mt-2 font-medium"
+                                        >
+                                            Something went wrong. Please try again.
+                                        </motion.p>
+                                    )}
+                                </div>
                             </form>
                         </div>
 

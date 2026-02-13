@@ -1,0 +1,77 @@
+{
+    "name": "Meronatic Contact Form Submission",
+    "nodes": [
+        {
+            "parameters": {
+                "httpMethod": "POST",
+                "path": "contact-form",
+                "options": {}
+            },
+            "type": "n8n-nodes-base.webhook",
+            "typeVersion": 1,
+            "position": [
+                0,
+                0
+            ],
+            "id": "webhook-node",
+            "name": "Webhook"
+        },
+        {
+            "parameters": {
+                "respondWith": "json",
+                "responseBody": "{\n  \"success\": true,\n  \"message\": \"Form submitted successfully\"\n}",
+                "options": {}
+            },
+            "type": "n8n-nodes-base.respondToWebhook",
+            "typeVersion": 1,
+            "position": [
+                480,
+                0
+            ],
+            "id": "respond-node",
+            "name": "Respond to Webhook"
+        },
+        {
+            "parameters": {
+                "fromEmail": "dev1@meronatic.com",
+                "toEmail": "marketing@meronatic.com",
+                "ccEmail": "hr@meronatic.com, admin@meronatic.com",
+                "subject": "=New Contact Form Submission: {{ $json.body.name }}",
+                "text": "=Name: {{ $json.body.name }}\nEmail: {{ $json.body.email }}\nPhone: {{ $json.body.phone }}\nCompany: {{ $json.body.company }}\n\nProject Description:\n{{ $json.body.projectDescription }}\n\nSubmitted At: {{ $json.body.submittedAt }}",
+                "options": {}
+            },
+            "type": "n8n-nodes-base.emailSend",
+            "typeVersion": 1,
+            "position": [
+                240,
+                0
+            ],
+            "id": "email-node",
+            "name": "Send Email"
+        }
+    ],
+    "connections": {
+        "Webhook": {
+            "main": [
+                [
+                    {
+                        "node": "Send Email",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "Send Email": {
+            "main": [
+                [
+                    {
+                        "node": "Respond to Webhook",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        }
+    }
+}
