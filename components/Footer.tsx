@@ -102,16 +102,20 @@ export default function Footer() {
                         </div>
 
                         {/* Legals */}
+                        {/* Legals */}
                         <div className="flex flex-col items-center md:items-start gap-8">
                             <h4 className="text-[14px] font-normal text-[#ffffff] text-center md:text-left">Legals</h4>
                             <ul className="flex flex-col items-center md:items-start gap-4">
-                                {['Privacy Policy', 'Term of Service'].map((item) => (
-                                    <li key={item}>
-                                        <a href="#" className="text-[18px] md:text-[20px] font-medium text-white hover:text-[#2ba0fe] transition-colors tracking-tight">
-                                            {item}
-                                        </a>
-                                    </li>
-                                ))}
+                                <li>
+                                    <a href="/privacy" className="text-[18px] md:text-[20px] font-medium text-white hover:text-[#2ba0fe] transition-colors tracking-tight">
+                                        Privacy Policy
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/terms" className="text-[18px] md:text-[20px] font-medium text-white hover:text-[#2ba0fe] transition-colors tracking-tight">
+                                        Terms of Service
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div>
