@@ -90,7 +90,12 @@ export default function StickyProjectCard({ project, index, total, progress, ran
                             </p>
                         </div>
                         <div className="mt-4 lg:mt-auto hidden lg:block">
-                            <a href="#" className="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-gray-300 transition-colors group/link">
+                            <a
+                                href={project.link || "#"}
+                                target={project.link ? "_blank" : undefined}
+                                rel={project.link ? "noopener noreferrer" : undefined}
+                                className="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-gray-300 transition-colors group/link"
+                            >
                                 View Case Study
                                 <ArrowUpRight size={16} className="group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
                             </a>
@@ -113,7 +118,12 @@ export default function StickyProjectCard({ project, index, total, progress, ran
                         </div>
                         {/* Mobile View Case Study Button */}
                         <div className="lg:hidden flex items-center">
-                            <a href="#" className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors">
+                            <a
+                                href={project.link || "#"}
+                                target={project.link ? "_blank" : undefined}
+                                rel={project.link ? "noopener noreferrer" : undefined}
+                                className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
+                            >
                                 <ArrowUpRight size={18} />
                             </a>
                         </div>

@@ -13,7 +13,8 @@
   --color-brand-orange: #2ba0fe;
 
   --font-cal: "Cal Sans", sans-serif;
-  --font-inter: "Inter", sans-serif;
+  --font-manrope: "Manrope", sans-serif;
+  --font-outfit: "Outfit", sans-serif;
 
   --animate-text-reveal: text-reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
   --animate-fade-in-up: fade-in-up 0.8s ease-out forwards;
@@ -107,8 +108,12 @@
 body {
   background-color: var(--color-background);
   color: var(--color-foreground);
-  font-family: var(--font-inter);
+  font-family: var(--font-manrope);
   overflow-x: hidden;
+}
+
+h1, .title {
+  font-family: var(--font-outfit);
 }
 
 @theme inline {

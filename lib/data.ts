@@ -7,6 +7,7 @@ export const PROJECTS = [
         year: "2026",
         role: "Design & Development",
         image: "/meronatic-pro.png",
+        link: "https://pro.meronatic.com/",
     },
     {
         id: "02",

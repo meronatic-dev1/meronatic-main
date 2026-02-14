@@ -1,13 +1,19 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Manrope, Outfit } from "next/font/google";
 import "./globals.css";
 import clsx from "clsx";
 import { ThemeProvider } from "@/components/theme-provider";
 import { FloatingThemeToggle } from "@/components/floating-theme-toggle";
 
-const inter = Inter({
+const manrope = Manrope({
     subsets: ["latin"],
-    variable: "--font-inter",
+    variable: "--font-manrope",
+    display: "swap",
+});
+
+const outfit = Outfit({
+    subsets: ["latin"],
+    variable: "--font-outfit",
     display: "swap",
 });
 
@@ -23,7 +29,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" className="scroll-smooth" suppressHydrationWarning>
-            <body className={clsx(inter.variable, "antialiased selection:bg-brand-blue selection:text-white")}>
+            <body className={clsx(manrope.variable, outfit.variable, "antialiased selection:bg-brand-blue selection:text-white")}>
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="light"
