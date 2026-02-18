@@ -188,7 +188,7 @@ function DifferenceCard({ item, index, setHoveredCard }: { item: any, index: num
                     rotateX: springRotateX,
                     rotateY: springRotateY,
                 }}
-                className="relative h-full bg-white/60 backdrop-blur-md border border-white/20 p-8 md:p-10 rounded-[2rem] shadow-sm overflow-hidden group"
+                className="relative h-full bg-white/60 dark:bg-black/40 backdrop-blur-md border border-white/20 dark:border-white/10 p-8 md:p-10 rounded-[2rem] shadow-sm overflow-hidden group"
             >
                 {/* "Border Beam" Effect */}
                 <div className="absolute inset-0 pointer-events-none rounded-[2rem] border border-transparent [background:linear-gradient(var(--angle),#E2E8F0,transparent)_border-box] [mask:linear-gradient(#fff_0_0)_padding-box,linear-gradient(#fff_0_0)] [mask-composite:exclude] [-webkit-mask-composite:xor] animate-border-beam" />
@@ -201,7 +201,7 @@ function DifferenceCard({ item, index, setHoveredCard }: { item: any, index: num
                     <h3 className="text-xl md:text-2xl font-bold font-cal mb-4 text-foreground group-hover:text-brand-blue transition-colors duration-300">
                         {item.title}
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-muted-foreground dark:text-gray-100 leading-relaxed">
                         {item.description}
                     </p>
                 </div>
@@ -217,7 +217,9 @@ const SubtleGrid = () => (
             backgroundImage: "radial-gradient(#000 1px, transparent 1px)",
             backgroundSize: "24px 24px"
         }}
-    />
+    >
+        <div className="absolute inset-0 bg-[radial-gradient(#000_1px,transparent_1px)] dark:bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:24px_24px]" />
+    </div>
 );
 
 export default function MeronaticDifference() {
