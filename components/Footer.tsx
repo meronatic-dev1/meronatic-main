@@ -49,7 +49,7 @@ export default function Footer() {
                                     <div className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 group-hover:bg-white/20 transition-colors">
                                         <Phone size={20} className="text-[#2ba0fe]" />
                                     </div>
-                                    <span>+971 56 459 1737</span>
+                                    <span>+971 55 459 1737</span>
                                 </a>
                             </li>
                             <li>
@@ -65,7 +65,7 @@ export default function Footer() {
                                     <MapPin size={20} className="text-[#2ba0fe]" />
                                 </div>
                                 <span className="text-[18px] md:text-[20px] font-medium text-white block max-w-[350px] text-center lg:text-left">
-                                    Meydan road, Nad Al Sheba, Dubai
+                                    Meydan Grandstand, 6th floor, Meydan Road, Nad Al Sheba, Dubai, U.A.E.
                                 </span>
                             </li>
                         </ul>
