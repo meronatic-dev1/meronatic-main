@@ -50,15 +50,29 @@ export default function Header() {
             <div className="container mx-auto px-4 md:px-6 flex items-center h-[70px] md:h-[80px]">
                 {/* Left Side: Logo */}
                 <div className="flex-1 flex items-center justify-start pl-0">
-                    <Link href="/" className="flex items-center">
-                        <Image
-                            src="/meronatic-logo.png"
-                            alt="Meronatic Logo"
-                            width={140}
-                            height={40}
-                            priority
-                            className="object-contain w-[100px] md:w-[140px] h-auto"
-                        />
+                    <Link href="/" className="flex items-center relative">
+                        {/* Icon Part (No filter, perfectly aligned) */}
+                        <div className="absolute inset-0 z-10 pointer-events-none" style={{ clipPath: 'inset(0 0 35% 0)' }}>
+                            <Image
+                                src="/meronatic-logo.png"
+                                alt="Meronatic Logo Icon"
+                                width={140}
+                                height={40}
+                                priority
+                                className="object-contain w-[100px] md:w-[140px] h-auto"
+                            />
+                        </div>
+                        {/* Text Part (Inverted in dark mode, defines the size) */}
+                        <div className="dark:invert z-0" style={{ clipPath: 'inset(65% 0 0 0)' }}>
+                            <Image
+                                src="/meronatic-logo.png"
+                                alt="Meronatic Logo Text"
+                                width={140}
+                                height={40}
+                                priority
+                                className="object-contain w-[100px] md:w-[140px] h-auto"
+                            />
+                        </div>
                     </Link>
                 </div>
 
