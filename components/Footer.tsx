@@ -45,11 +45,11 @@ export default function Footer() {
                         <h4 className="text-[14px] font-normal text-[#ffffff] text-center lg:text-left">Contact</h4>
                         <ul className="flex flex-col gap-6">
                             <li>
-                                <a href="tel:+971564591737" className="group flex flex-col lg:flex-row items-center gap-4 text-[18px] md:text-[20px] font-medium text-white hover:text-white/80 transition-opacity tracking-tight">
+                                <a href="tel:+971563921344" className="group flex flex-col lg:flex-row items-center gap-4 text-[18px] md:text-[20px] font-medium text-white hover:text-white/80 transition-opacity tracking-tight">
                                     <div className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 group-hover:bg-white/20 transition-colors">
                                         <Phone size={20} className="text-[#2ba0fe]" />
                                     </div>
-                                    <span>+971 55 459 1737</span>
+                                    <span>+971 56 392 1344</span>
                                 </a>
                             </li>
                             <li>
